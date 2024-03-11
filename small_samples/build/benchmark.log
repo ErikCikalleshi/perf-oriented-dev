@@ -1,0 +1,45 @@
+Linux n001.intern.lcc3.intra.uibk.ac.at 4.18.0-477.21.1.el8_8.x86_64 #1 SMP Tue Aug 8 21:30:09 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux
+              total        used        free      shared  buff/cache   available
+Mem:          48000        4236       37819         908        5944       42297
+Swap:         24999           0       24999
+System Configuration:
+['0.02user', '0.00system', '0:00.03elapsed', '61%CPU', '(0avgtext+0avgdata', '1344maxresident)k']
+['0.02user', '0.00system', '0:00.02elapsed', '96%CPU', '(0avgtext+0avgdata', '1352maxresident)k']
+['0.02user', '0.00system', '0:00.02elapsed', '92%CPU', '(0avgtext+0avgdata', '1380maxresident)k']
+['0.02user', '0.00system', '0:00.02elapsed', '100%CPU', '(0avgtext+0avgdata', '1392maxresident)k']
+['0.02user', '0.00system', '0:00.02elapsed', '100%CPU', '(0avgtext+0avgdata', '1284maxresident)k']
+delannoy:	
+Avg Elapsed Time - 0.0000s, Avg User Time - 0.0200s, Avg System Time - 0.0000s,	
+Var Elapsed Time - 0.0000s^2, Var User Time - 0.0000s^2, Var System Time - 0.0000s^2
+['2.58user', '0.00system', '0:02.61elapsed', '98%CPU', '(0avgtext+0avgdata', '1896maxresident)k']
+['2.58user', '0.00system', '0:02.59elapsed', '99%CPU', '(0avgtext+0avgdata', '1792maxresident)k']
+['2.57user', '0.00system', '0:02.58elapsed', '99%CPU', '(0avgtext+0avgdata', '1884maxresident)k']
+['2.58user', '0.00system', '0:02.58elapsed', '99%CPU', '(0avgtext+0avgdata', '1872maxresident)k']
+['2.57user', '0.00system', '0:02.58elapsed', '99%CPU', '(0avgtext+0avgdata', '1840maxresident)k']
+nbody:	
+Avg Elapsed Time - 2.5200s, Avg User Time - 2.5760s, Avg System Time - 0.0000s,	
+Var Elapsed Time - 0.0020s^2, Var User Time - 0.0000s^2, Var System Time - 0.0000s^2
+['2.06user', '0.00system', '0:02.08elapsed', '99%CPU', '(0avgtext+0avgdata', '24492maxresident)k']
+['2.09user', '0.00system', '0:02.10elapsed', '99%CPU', '(0avgtext+0avgdata', '24540maxresident)k']
+['2.07user', '0.00system', '0:02.08elapsed', '99%CPU', '(0avgtext+0avgdata', '24492maxresident)k']
+['2.08user', '0.00system', '0:02.09elapsed', '99%CPU', '(0avgtext+0avgdata', '24584maxresident)k']
+['2.19user', '0.00system', '0:02.21elapsed', '99%CPU', '(0avgtext+0avgdata', '24540maxresident)k']
+mmul:	
+Avg Elapsed Time - 2.0600s, Avg User Time - 2.0980s, Avg System Time - 0.0000s,	
+Var Elapsed Time - 0.0080s^2, Var User Time - 0.0028s^2, Var System Time - 0.0000s^2
+['0.00user', '0.00system', '0:00.04elapsed', '11%CPU', '(0avgtext+0avgdata', '1468maxresident)k']
+['0.00user', '0.00system', '0:00.00elapsed', '25%CPU', '(0avgtext+0avgdata', '1540maxresident)k']
+['0.00user', '0.00system', '0:00.00elapsed', '25%CPU', '(0avgtext+0avgdata', '1484maxresident)k']
+['0.00user', '0.00system', '0:00.00elapsed', '25%CPU', '(0avgtext+0avgdata', '1440maxresident)k']
+['0.00user', '0.00system', '0:00.01elapsed', '20%CPU', '(0avgtext+0avgdata', '1396maxresident)k']
+filesearch:	
+Avg Elapsed Time - 0.0000s, Avg User Time - 0.0000s, Avg System Time - 0.0000s,	
+Var Elapsed Time - 0.0000s^2, Var User Time - 0.0000s^2, Var System Time - 0.0000s^2
+['0.21user', '1.37system', '0:42.05elapsed', '3%CPU', '(0avgtext+0avgdata', '1492maxresident)k']
+['0.26user', '1.59system', '0:17.84elapsed', '10%CPU', '(0avgtext+0avgdata', '1464maxresident)k']
+['0.26user', '1.27system', '0:15.77elapsed', '9%CPU', '(0avgtext+0avgdata', '1532maxresident)k']
+['0.22user', '1.30system', '0:15.33elapsed', '9%CPU', '(0avgtext+0avgdata', '1544maxresident)k']
+['0.26user', '1.25system', '0:15.28elapsed', '9%CPU', '(0avgtext+0avgdata', '1536maxresident)k']
+filegen:	
+Avg Elapsed Time - 21.2000s, Avg User Time - 0.2420s, Avg System Time - 1.3560s,	
+Var Elapsed Time - 136.3150s^2, Var User Time - 0.0006s^2, Var System Time - 0.0192s^2
