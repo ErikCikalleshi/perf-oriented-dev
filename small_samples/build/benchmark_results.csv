@@ -1,0 +1,6 @@
+Benchmark,Avg Elapsed Time (s),Avg User Time (s),Avg System Time (s),Var Elapsed Time (s^2),Var User Time (s^2),Var System Time (s^2)
+delannoy,0.0,0.02,0.0,0.0,0.0,0.0
+nbody,2.52,2.576,0.0,0.0020000000000000035,3.0000000000001387e-05,0.0
+mmul,2.06,2.098,0.0,0.008000000000000014,0.0027699999999999986,0.0
+filesearch,0.0,0.0,0.0,0.0,0.0,0.0
+filegen,21.2,0.242,1.356,136.315,0.0006200000000000003,0.019180000000000006
