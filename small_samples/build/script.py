@@ -49,7 +49,7 @@ def run_benchmark(benchmark, repetitions):
 
 def main():
     # Define benchmarks and repetitions
-    benchmarks = [("delannoy", "10"), ("nbody", ""), ("mmul", ""), ("filesearch", ""), ("filegen", "100 100 500 700 1")]
+    benchmarks = [("delannoy", "14"), ("nbody", ""), ("mmul", ""), ("filesearch", ""), ("filegen", "100 100 500 700 1")]
     repetitions = 5
 
     # System information
@@ -59,9 +59,10 @@ def main():
 
     results_list = []
     for benchmark in benchmarks:
+        print(benchmark[0])
         results = run_benchmark(benchmark, repetitions)
         results_list.append(results)
-        print(f"{results['Benchmark']}:\t\nAvg Elapsed Time - {results['Avg Elapsed Time (s)']:.4f}s, Avg User Time - {results['Avg User Time (s)']:.4f}s, Avg System Time - {results['Avg System Time (s)']:.4f}s,\t\nVar Elapsed Time - {results['Var Elapsed Time (s^2)']:.4f}s^2, Var User Time - {results['Var User Time (s^2)']:.4f}s^2, Var System Time - {results['Var System Time (s^2)']:.4f}s^2")
+        print(f"Avg Elapsed Time - {results['Avg Elapsed Time (s)']:.4f}s, Avg User Time - {results['Avg User Time (s)']:.4f}s, Avg System Time - {results['Avg System Time (s)']:.4f}s,\t\nVar Elapsed Time - {results['Var Elapsed Time (s^2)']:.4f}s^2, Var User Time - {results['Var User Time (s^2)']:.4f}s^2, Var System Time - {results['Var System Time (s^2)']:.4f}s^2")
 
     # Write results to CSV
     with open("benchmark_results.csv", "w", newline="") as csvfile:
