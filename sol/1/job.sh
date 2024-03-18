@@ -13,3 +13,6 @@
 
 # Run the Python benchmark script
 /usr/bin/python3 script.py
+
+
+# NOTE: SBATCH --chdir="DIRNAME"
