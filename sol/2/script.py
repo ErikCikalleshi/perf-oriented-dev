@@ -12,8 +12,7 @@ def run_benchmark(benchmark, repetitions):
     max_mem_sizes = []
 
     for _ in range(repetitions):
-        args = [f"./{benchmark[0]}"] + benchmark[1].split()
-        result = subprocess.run(["/bin/time", "-f", "%e;%U;%S;%M"] + args, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        result = subprocess.run(["/bin/time", "-f", "%e;%U;%S;%M"] + benchmark.split(), stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         output_lines = result.stderr.decode().strip().split("\n")
         
         # Extracting time and memory information from the first line
@@ -38,7 +37,7 @@ def run_benchmark(benchmark, repetitions):
     var_max_mem_size = variance(max_mem_sizes)
 
     return {
-        "benchmark": benchmark[0],
+        "benchmark": benchmark,
         "avg_elapsed_time_s": avg_elapsed_time,
         "avg_user_time_s": avg_user_time,
         "avg_system_time_s": avg_system_time,
@@ -51,7 +50,10 @@ def run_benchmark(benchmark, repetitions):
 
 def main():
     # Define benchmarks and repetitions
-    benchmarks = [("exec_with_workstation_heavy.sh", "\"./delannoy 14\"")]
+    benchmarks = [
+        './delannoy 13'
+    ]
+
     REPS = 5
     confidence_level = 0.95
     max_confidence_interval_width = 0.01  # Adjust this to change the desired precision

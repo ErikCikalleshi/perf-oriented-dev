@@ -1,3 +1,4 @@
+#!/bin/sh
 killall loadgen &> /dev/null
 ../build/loadgen mc3 workstation/sys_load_profile_workstation_excerpt.txt &> /dev/null &
 ../build/loadgen mc3 workstation/sys_load_profile_workstation_excerpt.txt &> /dev/null &
