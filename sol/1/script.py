@@ -4,10 +4,6 @@ from statistics import mean, variance
 import csv
 
 def run_benchmark(benchmark, repetitions):
-    """
-    Runs a benchmark program for a specified number of repetitions and returns
-    a dictionary containing the average performance metrics.
-    """
     elapsed_times = []
     user_times = []
     system_times = []
