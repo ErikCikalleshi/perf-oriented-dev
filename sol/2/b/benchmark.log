@@ -1,0 +1,9 @@
+Current directory: /gpfs/gpfs1/scratch/cb761222
+['35.20', '0.60', '2.72', '1544']
+['37.62', '0.62', '2.71', '1360']
+['36.90', '0.59', '2.74', '1484']
+['35.87', '0.62', '2.83', '1492']
+['36.83', '0.60', '2.65', '1460']
+1.6651436915281153
+Avg Elapsed Time - 36.4840s, Avg User Time - 0.6060s, Avg System Time - 2.7300s, Avg Max Mem Size - 1468.0000KB,
+Var Elapsed Time - 0.9022s^2, Var User Time - 0.0002s^2, Var System Time - 0.0043s^2, Var Max Mem Size - 4584.0000KB^2, Confidence Interval Width - 1.6651

@@ -1,0 +1,2 @@
+avg_elapsed_time_s,avg_user_time_s,avg_system_time_s,avg_max_mem_size_kb,var_elapsed_time_s2,var_user_time_s2,var_system_time_s2,var_max_mem_size_kb2,confidence_interval_width
+36.484,0.606,2.73,1468,0.9022299999999969,0.0001800000000000003,0.004250000000000007,4584,1.6651436915281153
