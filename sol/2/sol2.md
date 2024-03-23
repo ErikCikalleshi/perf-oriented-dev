@@ -12,9 +12,9 @@ The program's performance remained relatively consistent despite adding more lin
 
 
 ## Exercise 2 
-I have build the C program with ` cmake .. -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Releaes`.
+I have build the C program with ` cmake` with the flag  `DCMAKE_BUILD_TYPE=Releaes`.
 * The program generates a load by creating and deleting files.
-* It takes three arguments: the number of files, iterations, and delay.
+* It takes three arguments: the number of files, iterations.
 * In each iteration, it creates files with random names, writes random data and then deletes them.
 * This repeats for the specified iterations with a delay between each iteration.
 Running `filegen` in the `/tmp` directory resulted in segmentation faults `"Command terminated by signal 11"` likely due to insufficient memory. Lowering the program's arguments didn't resolve the issue as the base values `filegen 50 50 50 50 1` were already minimal.
