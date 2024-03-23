@@ -100,7 +100,7 @@ Each sample counts as 0.01 seconds.
 * compute_rhs (18.11%): 202 calls, 1.03 seconds per call.
 * less impactful matmul_sub (7.96%) and matvec_sub (1.62%).
 
-### Conclusion localy
+### Conclusion
 * The most time-consuming functions are `compute_rhs`, `y_solve`, `binvcrhs`, `x_solve` and `z_solve`.
 * In both cases `compute_rhs` is taking alot of time.
 * What are possible solutions?
@@ -109,3 +109,24 @@ Each sample counts as 0.01 seconds.
     * Parallelization of the most time-consuming functions
     * Utilizing memoization, if binvcrhs executes redundant calculations
     * Reviewing the data structures
+
+## LCC3
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  us/call  us/call  name    
+ 62.51      0.05     0.05   201300     0.25     0.25  binvcrhs
+ 12.50      0.06     0.01   201300     0.05     0.05  matmul_sub
+ 12.50      0.07     0.01       62   161.31   161.31  compute_rhs
+ 12.50      0.08     0.01       61   163.96   491.87  z_solve
+  0.00      0.08     0.00   201300     0.00     0.00  matvec_sub
+  0.00      0.08     0.00    27792     0.00     0.00  exact_solution
+  0.00      0.08     0.00    18300     0.00     0.00  binvrhs
+  0.00      0.08     0.00    18300     0.00     0.00  lhsinit
+  0.00      0.08     0.00       61     0.00   327.91  x_solve
+  0.00      0.08     0.00       61     0.00   327.91  y_solve
+  0.00      0.08     0.00        2     0.00     0.00  wtime_
+  0.00      0.08     0.00        1     0.00     0.00  error_norm
+  0.00      0.08     0.00        1     0.00     0.00  rhs_norm
+
+* Total time is 0.08
