@@ -63,7 +63,7 @@ def main():
 
     confidence_level = 0.95
     max_confidence_interval_width = 0.01  # Adjust this to change the desired precision
-    max_repetitions = 5  # Maximum number of repetitions
+    max_repetitions = 10  # Maximum number of repetitions
 
     results_list = []
     for benchmark in benchmarks:
