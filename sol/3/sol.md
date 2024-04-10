@@ -1,3 +1,4 @@
+# Exercise 1
 First of all we need to compile the binaries with the `-pg` flag to generate the profiling information.
 I added in the `CMakeLists.txt` the following line to compile the binaries with the `-pg` flag and chose the `Debug` build type.
 
@@ -25,42 +26,45 @@ Where [X] is either `_s`, `_w`, `_a`, `_b` or `_c` depending on the binary to pr
 6. total ms/call: cumulative time divided by the number of calls
 7. name: name of the function
 
-### _a local execution
+### _s local execution
 ```
 Each sample counts as 0.01 seconds.
   %   cumulative   self              self     total           
  time   seconds   seconds    calls  ms/call  ms/call  name    
- 18.29     12.19    12.19      203    60.05    60.05  compute_rhs
- 17.98     24.17    11.98      201    59.60    90.68  y_solve
- 17.26     35.67    11.50  2317932     0.00     0.00  binvcrhs
- 16.24     46.49    10.82      201    53.83    84.91  x_solve
- 15.22     56.63    10.14                             z_solve
-  8.19     62.09     5.46 146029716     0.00     0.00  matmul_sub
-  2.30     63.62     1.53 292059432     0.00     0.00  set_constants
-  1.44     64.58     0.96                             matvec_sub
-  1.13     65.33     0.75      201     3.73     3.73  add
-  0.92     65.94     0.61      203     3.00     3.00  verify
-  0.38     66.19     0.25  2317932     0.00     0.00  lhsinit
-  0.24     66.35     0.16        1   160.00   160.00  print_results
-  0.20     66.48     0.13  4195072     0.00     0.00  exact_solution
-  0.09     66.54     0.06        1    60.00   128.17  binvrhs
-  0.09     66.60     0.06                             wtime_
-  0.05     66.63     0.03        1    30.00    52.87  exact_rhs
-  0.02     66.64     0.01        2     5.00    54.38  initialize
-  0.00     66.64     0.00      201     0.00    63.05  adi
-  0.00     66.64     0.00       22     0.00     0.00  timer_clear
-  0.00     66.64     0.00        2     0.00     3.00  elapsed_time
-  0.00     66.64     0.00        1     0.00     8.12  error_norm
-  0.00     66.64     0.00        1     0.00     0.00  rhs_norm
-  0.00     66.64     0.00        1     0.00     0.00  timer_read
-  0.00     66.64     0.00        1     0.00     3.00  timer_start
-  0.00     66.64     0.00        1     0.00     3.00  timer_stop
+ 40.00      0.04     0.04   201300     0.00     0.00  binvcrhs
+ 40.00      0.08     0.04       61     0.66     0.87  z_solve
+ 10.00      0.09     0.01       62     0.16     0.16  compute_rhs
+ 10.00      0.10     0.01       61     0.16     0.38  y_solve
+  0.00      0.10     0.00   201300     0.00     0.00  matmul_sub
+  0.00      0.10     0.00   201300     0.00     0.00  matvec_sub
+  0.00      0.10     0.00    27792     0.00     0.00  exact_solution
+  0.00      0.10     0.00    18300     0.00     0.00  binvrhs
+  0.00      0.10     0.00    18300     0.00     0.00  lhsinit
+  0.00      0.10     0.00       61     0.00     0.00  add
+  0.00      0.10     0.00       61     0.00     1.64  adi
+  0.00      0.10     0.00       61     0.00     0.22  x_solve
+  0.00      0.10     0.00       22     0.00     0.00  timer_clear
+  0.00      0.10     0.00        2     0.00     0.00  elapsed_time
+  0.00      0.10     0.00        2     0.00     0.00  initialize
+  0.00      0.10     0.00        2     0.00     0.00  wtime_
+  0.00      0.10     0.00        1     0.00     0.00  error_norm
+  0.00      0.10     0.00        1     0.00     0.00  exact_rhs
+  0.00      0.10     0.00        1     0.00     0.00  print_results
+  0.00      0.10     0.00        1     0.00     0.00  rhs_norm
+  0.00      0.10     0.00        1     0.00     0.00  set_constants
+  0.00      0.10     0.00        1     0.00     0.00  timer_read
+  0.00      0.10     0.00        1     0.00     0.00  timer_start
+  0.00      0.10     0.00        1     0.00     0.00  timer_stop
+  0.00      0.10     0.00        1     0.00     0.16  verify
+
 ```
-* Overall time: 66.64 seconds (can see on the last row of the cumulative time)
-* The function `compute_rhs` is the most time-consuming function with 18.29% of the total time, taking 60.05 ms per call.
-* `y_solve` follows closely with 17.98% (90.68 ms/call) and `binvcrhs` with 17.26%.
-* Less impactful functions were for example set_constants with 2.30% and matvec_sub with 1.44%.
-    * Functions like printing results, initialization take very little time.
+* Overall time: 0.10 (can see on the last row of the cumulative time)
+* The most time-consuming function is `binvcrhs` with 40.00% of the total time.
+* `z_solve` (40.00%) and `compute_rhs` (10.00%) are also impactful.
+* less impactful functions were binvrhs, x_solve, adi...
+    * also for printing results, initializing, etc.
+
+
 
 ### _c local execution
 ```
@@ -100,18 +104,8 @@ Each sample counts as 0.01 seconds.
 * compute_rhs (18.11%): 202 calls, 1.03 seconds per call.
 * less impactful matmul_sub (7.96%) and matvec_sub (1.62%).
 
-### Conclusion
-* The most time-consuming functions are `compute_rhs`, `y_solve`, `binvcrhs`, `x_solve` and `z_solve`.
-* In both cases `compute_rhs` is taking alot of time.
-* What are possible solutions?
-    * Reducing the number of calls of binvcrhs and compute_rhs, especially in the _c case.
-    * Algorithmic optimizations in the most time-consuming functions
-    * Parallelization of the most time-consuming functions
-    * Utilizing memoization, if binvcrhs executes redundant calculations
-    * Reviewing the data structures
-
-## LCC3
-
+### _s lcc3
+```
 Each sample counts as 0.01 seconds.
   %   cumulative   self              self     total           
  time   seconds   seconds    calls  us/call  us/call  name    
@@ -128,5 +122,68 @@ Each sample counts as 0.01 seconds.
   0.00      0.08     0.00        2     0.00     0.00  wtime_
   0.00      0.08     0.00        1     0.00     0.00  error_norm
   0.00      0.08     0.00        1     0.00     0.00  rhs_norm
+```
+* Total time is 0.08 seconds
+* The most time-consuming function is `binvcrhs` with 62.51% of the total time.
+* `matmul_sub` and `compute_rhs` are also impactful with 12.50% each.
+* `z_solve` (12.50%) is also impactful.
+* less impactful functions were binvrhs, x_solve, y_solve
 
-* Total time is 0.08
+### Difference between lcc3 and local execution
+* We can see that the calls for all functions are the same, but the time spent in each function is different.
+* The most time-consuming function is `binvcrhs` in both cases.
+* `compute_rhs` is also impactful in both cases.
+* `z_solve` is more impactful in the local execution.
+* Strangly `matmul_sub` is more impactful in the lcc3 execution (12.50% time[lcc3] vs 0.00 time[locally]).
+* `y_solve` in the local execution takes more 10% of the time, while in the lcc3 execution it takes 0.00% of the time.
+
+![alt text](image.png)
+
+### _c lcc3
+```
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls   s/call   s/call  name    
+ 29.11    369.75   369.75 2485324800     0.00     0.00  binvcrhs
+ 17.02    585.90   216.15 2485324800     0.00     0.00  matmul_sub
+ 13.70    759.91   174.01      201     0.87     1.95  z_solve
+ 13.12    926.58   166.66      201     0.83     1.92  y_solve
+ 10.66   1061.97   135.40      201     0.67     1.76  x_solve
+  9.98   1188.67   126.70      202     0.63     0.63  compute_rhs
+  5.20   1254.70    66.03 2485324800     0.00     0.00  matvec_sub
+  0.69   1263.43     8.73                             add
+  0.15   1265.37     1.94 15436800     0.00     0.00  lhsinit
+  0.13   1267.06     1.69 68026392     0.00     0.00  exact_solution
+  0.08   1268.13     1.07 15436800     0.00     0.00  binvrhs
+  0.07   1269.02     0.89                             set_constants
+  0.06   1269.79     0.77                             exact_rhs
+  0.03   1270.11     0.32                             initialize
+  0.00   1270.14     0.03        1     0.03     0.03  rhs_norm
+  0.00   1270.16     0.02        1     0.02     0.13  error_norm
+  0.00   1270.16     0.00        2     0.00     0.00  wtime_
+```
+* Total execution time: 1270.16 seconds
+* The function `binvcrhs` is the most time-consuming function with 29.11% of the total time.
+* `matmul_sub` (17.02%) and `z_solve` (13.70%) are also impactful.
+
+### Difference between lcc3 and local execution
+* We can see that the calls for all functions are the same, but the time spent in each function is different.
+* The most time-consuming function is `binvcrhs` in both cases (29.11% vs 19.84%).
+* `matmul_sub` is more impactful in the lcc3 execution (17.02% vs 7.96%).
+* `z_solve` is more impactful in the local execution (17.02% vs 18.29%).
+
+![alt text](image-1.png)
+
+### Conclusion
+* Why are the results in terms of time spent in each function different between the local and lcc3 execution?
+    * Hardware differences (CPU, memory, etc.)
+    *  system configurations
+    *  other processes running on the system
+* The most time-consuming functions are `binvcrhs`, `y_solve`, `compute_rhs`, `x_solve` and `z_solve`.
+* In almost all cases `compute_rhs` & `binvcrhs` is taking most of the time.
+* What are possible solutions?
+    * Reducing the number of calls of binvcrhs and compute_rhs, especially in the _c case.
+    * Algorithmic optimizations in the most time-consuming functions
+    * Parallelization of the most time-consuming functions
+    * Utilizing memoization, if binvcrhs executes redundant calculations
+    * Reviewing the data structures
