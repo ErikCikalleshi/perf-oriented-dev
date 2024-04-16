@@ -12,6 +12,12 @@ As of right now in the 5 variant of the large C program the program with the low
 ### s
 ![alt text](s.png)
 
+Runtime with massif
+3.3s
+
+Runtime without massif
+0.3s
+
 As for ssca2 
 
 ![alt text](ssca2.png)
@@ -19,4 +25,10 @@ As for ssca2
 The program's memory usage starts at 8.5 MB of the heap. We firtsly generate "Scal Data" three times. It stabilizes for a while before experiencing a sudden peak to 25.69 MB for the betweennessCentrality() of function for all three generated sets. Then it followes a drop to 10 MB. Afterward, it fluctuates between around 8 to 25 MB Towards the end, it reaches another peak of 20.99 MB. In general the computeGraph() functions are stable as they need with time a little more memory. 
 
 
-The perturbation in execution time caused by using Massif in this case is not significant but it can be potentially massive.
+The perturbation in execution time caused by using Massif can be potentially massive.
+
+Runtime with massif
+1.25min
+
+Runtime without massif
+0.51s
