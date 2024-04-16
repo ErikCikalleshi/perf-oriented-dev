@@ -3,11 +3,6 @@ project(perf_prog_npb_bt)
 
 set_property(GLOBAL PROPERTY C_STANDARD 11)
 
-set( CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -pg")
-set( CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pg")
-set( CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -pg")
-set( CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -pg")
-
 if(MSVC)
   add_compile_options(/W4)
 else()
