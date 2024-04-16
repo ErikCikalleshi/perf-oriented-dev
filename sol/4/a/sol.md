@@ -1,0 +1,1 @@
+As of right now in the 5 variant of the large C program the program with the lowest workload is the one that uses most memory heap with approx. 170 kB. The others are below 160 kb.
