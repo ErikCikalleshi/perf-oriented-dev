@@ -1,0 +1,546 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 31K of event 'L1-dcache-load-misses:u'
+# Event count (approx.): 729337502
+#
+# Overhead  Command   Shared Object  Symbol            
+# ........  ........  .............  ..................
+#
+    21.90%  npb_bt_a  npb_bt_a       [.] z_solve
+    21.86%  npb_bt_a  npb_bt_a       [.] y_solve
+    16.54%  npb_bt_a  npb_bt_a       [.] x_solve
+    13.70%  npb_bt_a  npb_bt_a       [.] compute_rhs
+    12.02%  npb_bt_a  npb_bt_a       [.] binvcrhs
+     7.35%  npb_bt_a  npb_bt_a       [.] matvec_sub
+     4.86%  npb_bt_a  npb_bt_a       [.] matmul_sub
+     0.93%  npb_bt_a  npb_bt_a       [.] add
+     0.78%  npb_bt_a  npb_bt_a       [.] lhsinit
+     0.05%  npb_bt_a  npb_bt_a       [.] binvrhs
+     0.01%  npb_bt_a  npb_bt_a       [.] exact_rhs
+     0.00%  npb_bt_a  npb_bt_a       [.] exact_solution
+     0.00%  npb_bt_a  npb_bt_a       [.] initialize
+
+
+# Samples: 42K of event 'L1-dcache-loads:u'
+# Event count (approx.): 22279931726
+#
+# Overhead  Command   Shared Object     Symbol                  
+# ........  ........  ................  ........................
+#
+    35.86%  npb_bt_a  npb_bt_a          [.] binvcrhs
+    26.02%  npb_bt_a  npb_bt_a          [.] matmul_sub
+     8.52%  npb_bt_a  npb_bt_a          [.] x_solve
+     8.46%  npb_bt_a  npb_bt_a          [.] z_solve
+     8.42%  npb_bt_a  npb_bt_a          [.] y_solve
+     6.72%  npb_bt_a  npb_bt_a          [.] compute_rhs
+     5.35%  npb_bt_a  npb_bt_a          [.] matvec_sub
+     0.23%  npb_bt_a  npb_bt_a          [.] binvrhs
+     0.17%  npb_bt_a  npb_bt_a          [.] exact_solution
+     0.15%  npb_bt_a  npb_bt_a          [.] add
+     0.05%  npb_bt_a  npb_bt_a          [.] exact_rhs
+     0.02%  npb_bt_a  npb_bt_a          [.] initialize
+     0.01%  npb_bt_a  npb_bt_a          [.] lhsinit
+     0.00%  npb_bt_a  ld-2.28.so        [.] do_lookup_x
+     0.00%  npb_bt_a  ld-2.28.so        [.] __GI___tunables_init
+     0.00%  npb_bt_a  ld-2.28.so        [.] _dl_start
+     0.00%  npb_bt_a  [unknown]         [k] 0xffffffffb8e01150
+     0.00%  npb_bt_a  ld-2.28.so        [.] _start
+
+
+# Samples: 39K of event 'L1-dcache-prefetch-misses:u'
+# Event count (approx.): 674490455
+#
+# Overhead  Command   Shared Object  Symbol                 
+# ........  ........  .............  .......................
+#
+    28.24%  npb_bt_a  npb_bt_a       [.] compute_rhs
+    16.51%  npb_bt_a  npb_bt_a       [.] binvcrhs
+    14.61%  npb_bt_a  npb_bt_a       [.] z_solve
+    13.97%  npb_bt_a  npb_bt_a       [.] y_solve
+    10.34%  npb_bt_a  npb_bt_a       [.] matvec_sub
+    10.07%  npb_bt_a  npb_bt_a       [.] x_solve
+     3.66%  npb_bt_a  npb_bt_a       [.] matmul_sub
+     2.43%  npb_bt_a  npb_bt_a       [.] add
+     0.10%  npb_bt_a  npb_bt_a       [.] binvrhs
+     0.05%  npb_bt_a  npb_bt_a       [.] lhsinit
+     0.01%  npb_bt_a  npb_bt_a       [.] exact_rhs
+     0.00%  npb_bt_a  libc-2.28.so   [.] __GI___printf_fp_l
+     0.00%  npb_bt_a  libc-2.28.so   [.] __GI___strlen_sse2
+     0.00%  npb_bt_a  ld-2.28.so     [.] _dl_lookup_symbol_x
+     0.00%  npb_bt_a  ld-2.28.so     [.] do_lookup_x
+
+
+# Samples: 4  of event 'L1-dcache-prefetches:u'
+# Event count (approx.): 21
+#
+# Overhead  Command   Shared Object  Symbol            
+# ........  ........  .............  ..................
+#
+    85.71%  npb_bt_a  npb_bt_a       [.] exact_solution
+     9.52%  npb_bt_a  npb_bt_a       [.] initialize
+     4.76%  npb_bt_a  npb_bt_a       [.] set_constants
+
+
+# Samples: 39K of event 'L1-dcache-store-misses:u'
+# Event count (approx.): 342550527
+#
+# Overhead  Command   Shared Object     Symbol                  
+# ........  ........  ................  ........................
+#
+    31.72%  npb_bt_a  npb_bt_a          [.] z_solve
+    31.68%  npb_bt_a  npb_bt_a          [.] y_solve
+    31.26%  npb_bt_a  npb_bt_a          [.] x_solve
+     3.11%  npb_bt_a  npb_bt_a          [.] compute_rhs
+     1.90%  npb_bt_a  npb_bt_a          [.] lhsinit
+     0.23%  npb_bt_a  npb_bt_a          [.] binvcrhs
+     0.05%  npb_bt_a  npb_bt_a          [.] exact_rhs
+     0.03%  npb_bt_a  npb_bt_a          [.] initialize
+     0.01%  npb_bt_a  npb_bt_a          [.] exact_solution
+     0.00%  npb_bt_a  [unknown]         [k] 0xffffffffb8e01c80
+     0.00%  npb_bt_a  ld-2.28.so        [.] _dl_important_hwcaps
+     0.00%  npb_bt_a  ld-2.28.so        [.] _dl_start
+     0.00%  npb_bt_a  [unknown]         [k] 0xffffffffb8e01150
+
+
+# Samples: 41K of event 'L1-dcache-stores:u'
+# Event count (approx.): 10465758282
+#
+# Overhead  Command   Shared Object  Symbol                        
+# ........  ........  .............  ..............................
+#
+    37.68%  npb_bt_a  npb_bt_a       [.] binvcrhs
+    16.84%  npb_bt_a  npb_bt_a       [.] y_solve
+    16.75%  npb_bt_a  npb_bt_a       [.] x_solve
+    16.26%  npb_bt_a  npb_bt_a       [.] z_solve
+     5.24%  npb_bt_a  npb_bt_a       [.] matmul_sub
+     3.79%  npb_bt_a  npb_bt_a       [.] compute_rhs
+     2.48%  npb_bt_a  npb_bt_a       [.] matvec_sub
+     0.45%  npb_bt_a  npb_bt_a       [.] lhsinit
+     0.23%  npb_bt_a  npb_bt_a       [.] binvrhs
+     0.17%  npb_bt_a  npb_bt_a       [.] add
+     0.05%  npb_bt_a  npb_bt_a       [.] exact_rhs
+     0.04%  npb_bt_a  npb_bt_a       [.] exact_solution
+     0.01%  npb_bt_a  npb_bt_a       [.] initialize
+     0.00%  npb_bt_a  ld-2.28.so     [.] _dl_lookup_symbol_x
+     0.00%  npb_bt_a  ld-2.28.so     [.] _dl_fixup
+     0.00%  npb_bt_a  ld-2.28.so     [.] _dl_runtime_resolve_fxsave
+     0.00%  npb_bt_a  npb_bt_a       [.] puts@plt
+
+
+# Samples: 30K of event 'L1-icache-load-misses:u'
+# Event count (approx.): 28305604
+#
+# Overhead  Command   Shared Object     Symbol                
+# ........  ........  ................  ......................
+#
+    17.72%  npb_bt_a  npb_bt_a          [.] binvrhs
+    17.46%  npb_bt_a  npb_bt_a          [.] binvcrhs
+    14.47%  npb_bt_a  npb_bt_a          [.] y_solve
+    13.44%  npb_bt_a  npb_bt_a          [.] z_solve
+    12.88%  npb_bt_a  npb_bt_a          [.] matmul_sub
+    11.04%  npb_bt_a  npb_bt_a          [.] x_solve
+     9.72%  npb_bt_a  npb_bt_a          [.] lhsinit
+     2.88%  npb_bt_a  npb_bt_a          [.] matvec_sub
+     0.36%  npb_bt_a  npb_bt_a          [.] compute_rhs
+     0.01%  npb_bt_a  npb_bt_a          [.] initialize
+     0.01%  npb_bt_a  npb_bt_a          [.] add
+     0.00%  npb_bt_a  npb_bt_a          [.] exact_rhs
+     0.00%  npb_bt_a  [unknown]         [k] 0xffffffffb8e01150
+     0.00%  npb_bt_a  npb_bt_a          [.] set_constants
+
+
+# Samples: 42K of event 'L1-icache-loads:u'
+# Event count (approx.): 20112958997
+#
+# Overhead  Command   Shared Object  Symbol            
+# ........  ........  .............  ..................
+#
+    30.87%  npb_bt_a  npb_bt_a       [.] binvcrhs
+    15.03%  npb_bt_a  npb_bt_a       [.] matmul_sub
+    13.94%  npb_bt_a  npb_bt_a       [.] x_solve
+    13.70%  npb_bt_a  npb_bt_a       [.] y_solve
+    13.58%  npb_bt_a  npb_bt_a       [.] z_solve
+     8.19%  npb_bt_a  npb_bt_a       [.] compute_rhs
+     3.90%  npb_bt_a  npb_bt_a       [.] matvec_sub
+     0.23%  npb_bt_a  npb_bt_a       [.] binvrhs
+     0.18%  npb_bt_a  npb_bt_a       [.] lhsinit
+     0.16%  npb_bt_a  npb_bt_a       [.] exact_solution
+     0.12%  npb_bt_a  npb_bt_a       [.] add
+     0.08%  npb_bt_a  npb_bt_a       [.] exact_rhs
+     0.01%  npb_bt_a  npb_bt_a       [.] initialize
+
+
+# Samples: 29K of event 'LLC-load-misses:u'
+# Event count (approx.): 44541709
+#
+# Overhead  Command   Shared Object     Symbol                
+# ........  ........  ................  ......................
+#
+    41.88%  npb_bt_a  npb_bt_a          [.] compute_rhs
+    18.61%  npb_bt_a  npb_bt_a          [.] y_solve
+    13.21%  npb_bt_a  npb_bt_a          [.] z_solve
+     8.47%  npb_bt_a  npb_bt_a          [.] add
+     6.32%  npb_bt_a  npb_bt_a          [.] matmul_sub
+     6.16%  npb_bt_a  npb_bt_a          [.] matvec_sub
+     3.38%  npb_bt_a  npb_bt_a          [.] binvcrhs
+     1.35%  npb_bt_a  npb_bt_a          [.] x_solve
+     0.60%  npb_bt_a  npb_bt_a          [.] lhsinit
+     0.01%  npb_bt_a  npb_bt_a          [.] binvrhs
+     0.00%  npb_bt_a  npb_bt_a          [.] exact_rhs
+     0.00%  npb_bt_a  [unknown]         [k] 0xffffffffb8e01c80
+     0.00%  npb_bt_a  npb_bt_a          [.] exact_solution
+     0.00%  npb_bt_a  npb_bt_a          [.] initialize
+
+
+# Samples: 30K of event 'LLC-loads:u'
+# Event count (approx.): 86031270
+#
+# Overhead  Command   Shared Object     Symbol                
+# ........  ........  ................  ......................
+#
+    49.27%  npb_bt_a  npb_bt_a          [.] compute_rhs
+    14.63%  npb_bt_a  npb_bt_a          [.] y_solve
+    14.32%  npb_bt_a  npb_bt_a          [.] z_solve
+     5.99%  npb_bt_a  npb_bt_a          [.] matvec_sub
+     5.94%  npb_bt_a  npb_bt_a          [.] add
+     4.41%  npb_bt_a  npb_bt_a          [.] matmul_sub
+     4.20%  npb_bt_a  npb_bt_a          [.] binvcrhs
+     0.80%  npb_bt_a  npb_bt_a          [.] x_solve
+     0.35%  npb_bt_a  npb_bt_a          [.] lhsinit
+     0.04%  npb_bt_a  npb_bt_a          [.] exact_rhs
+     0.04%  npb_bt_a  npb_bt_a          [.] binvrhs
+     0.01%  npb_bt_a  [unknown]         [k] 0xffffffffb8e01c80
+     0.00%  npb_bt_a  npb_bt_a          [.] exact_solution
+     0.00%  npb_bt_a  npb_bt_a          [.] initialize
+
+
+# Samples: 3K of event 'LLC-prefetch-misses:u'
+# Event count (approx.): 34021295
+#
+# Overhead  Command   Shared Object  Symbol            
+# ........  ........  .............  ..................
+#
+    80.70%  npb_bt_a  npb_bt_a       [.] compute_rhs
+     8.81%  npb_bt_a  npb_bt_a       [.] x_solve
+     6.36%  npb_bt_a  npb_bt_a       [.] add
+     2.28%  npb_bt_a  npb_bt_a       [.] matmul_sub
+     1.41%  npb_bt_a  npb_bt_a       [.] binvcrhs
+     0.17%  npb_bt_a  npb_bt_a       [.] matvec_sub
+     0.14%  npb_bt_a  npb_bt_a       [.] lhsinit
+     0.08%  npb_bt_a  npb_bt_a       [.] exact_solution
+     0.03%  npb_bt_a  npb_bt_a       [.] y_solve
+     0.01%  npb_bt_a  npb_bt_a       [.] exact_rhs
+     0.00%  npb_bt_a  npb_bt_a       [.] binvrhs
+
+
+# Samples: 3K of event 'LLC-prefetches:u'
+# Event count (approx.): 56039549
+#
+# Overhead  Command   Shared Object     Symbol                
+# ........  ........  ................  ......................
+#
+    86.65%  npb_bt_a  npb_bt_a          [.] compute_rhs
+     5.38%  npb_bt_a  npb_bt_a          [.] x_solve
+     4.51%  npb_bt_a  npb_bt_a          [.] add
+     1.45%  npb_bt_a  npb_bt_a          [.] matmul_sub
+     1.08%  npb_bt_a  npb_bt_a          [.] binvcrhs
+     0.43%  npb_bt_a  npb_bt_a          [.] matvec_sub
+     0.18%  npb_bt_a  npb_bt_a          [.] y_solve
+     0.09%  npb_bt_a  npb_bt_a          [.] exact_solution
+     0.07%  npb_bt_a  npb_bt_a          [.] lhsinit
+     0.07%  npb_bt_a  npb_bt_a          [.] z_solve
+     0.06%  npb_bt_a  npb_bt_a          [.] binvrhs
+     0.03%  npb_bt_a  npb_bt_a          [.] exact_rhs
+     0.00%  npb_bt_a  [unknown]         [k] 0xffffffffb8e01150
+     0.00%  npb_bt_a  npb_bt_a          [.] error_norm
+
+
+# Samples: 276  of event 'LLC-store-misses:u'
+# Event count (approx.): 1668589
+#
+# Overhead  Command   Shared Object  Symbol            
+# ........  ........  .............  ..................
+#
+   100.00%  npb_bt_a  npb_bt_a       [.] compute_rhs
+     0.00%  npb_bt_a  npb_bt_a       [.] exact_solution
+
+
+# Samples: 6K of event 'LLC-stores:u'
+# Event count (approx.): 30595190
+#
+# Overhead  Command   Shared Object  Symbol            
+# ........  ........  .............  ..................
+#
+    73.28%  npb_bt_a  npb_bt_a       [.] compute_rhs
+     8.13%  npb_bt_a  npb_bt_a       [.] add
+     4.82%  npb_bt_a  npb_bt_a       [.] z_solve
+     4.36%  npb_bt_a  npb_bt_a       [.] matmul_sub
+     4.00%  npb_bt_a  npb_bt_a       [.] y_solve
+     2.74%  npb_bt_a  npb_bt_a       [.] x_solve
+     1.12%  npb_bt_a  npb_bt_a       [.] matvec_sub
+     1.01%  npb_bt_a  npb_bt_a       [.] binvcrhs
+     0.24%  npb_bt_a  npb_bt_a       [.] lhsinit
+     0.14%  npb_bt_a  npb_bt_a       [.] binvrhs
+     0.09%  npb_bt_a  npb_bt_a       [.] exact_rhs
+     0.07%  npb_bt_a  npb_bt_a       [.] exact_solution
+     0.00%  npb_bt_a  npb_bt_a       [.] initialize
+
+
+# Samples: 31K of event 'branch-load-misses:u'
+# Event count (approx.): 194179960
+#
+# Overhead  Command   Shared Object     Symbol                
+# ........  ........  ................  ......................
+#
+    23.94%  npb_bt_a  npb_bt_a          [.] binvcrhs
+    17.80%  npb_bt_a  npb_bt_a          [.] compute_rhs
+    15.94%  npb_bt_a  npb_bt_a          [.] matmul_sub
+    15.61%  npb_bt_a  npb_bt_a          [.] matvec_sub
+     8.29%  npb_bt_a  npb_bt_a          [.] z_solve
+     8.06%  npb_bt_a  npb_bt_a          [.] y_solve
+     7.89%  npb_bt_a  npb_bt_a          [.] x_solve
+     1.45%  npb_bt_a  npb_bt_a          [.] add
+     0.60%  npb_bt_a  npb_bt_a          [.] exact_solution
+     0.20%  npb_bt_a  npb_bt_a          [.] binvrhs
+     0.10%  npb_bt_a  npb_bt_a          [.] exact_rhs
+     0.08%  npb_bt_a  npb_bt_a          [.] lhsinit
+     0.04%  npb_bt_a  npb_bt_a          [.] initialize
+     0.00%  npb_bt_a  [unknown]         [k] 0xffffffffb8e01c80
+
+
+# Samples: 41K of event 'branch-loads:u'
+# Event count (approx.): 262225733
+#
+# Overhead  Command   Shared Object  Symbol                      
+# ........  ........  .............  ............................
+#
+    23.47%  npb_bt_a  npb_bt_a       [.] matvec_sub
+    18.09%  npb_bt_a  npb_bt_a       [.] compute_rhs
+    16.00%  npb_bt_a  npb_bt_a       [.] matmul_sub
+    15.58%  npb_bt_a  npb_bt_a       [.] binvcrhs
+     8.12%  npb_bt_a  npb_bt_a       [.] z_solve
+     8.02%  npb_bt_a  npb_bt_a       [.] x_solve
+     8.01%  npb_bt_a  npb_bt_a       [.] y_solve
+     1.50%  npb_bt_a  npb_bt_a       [.] add
+     0.50%  npb_bt_a  npb_bt_a       [.] exact_solution
+     0.27%  npb_bt_a  npb_bt_a       [.] binvrhs
+     0.22%  npb_bt_a  npb_bt_a       [.] lhsinit
+     0.10%  npb_bt_a  npb_bt_a       [.] exact_rhs
+     0.06%  npb_bt_a  npb_bt_a       [.] error_norm
+     0.06%  npb_bt_a  npb_bt_a       [.] initialize
+     0.01%  npb_bt_a  libc-2.28.so   [.] __mempcpy_sse2_unaligned
+
+
+# Samples: 30K of event 'dTLB-load-misses:u'
+# Event count (approx.): 1243211
+#
+# Overhead  Command   Shared Object     Symbol                
+# ........  ........  ................  ......................
+#
+    34.87%  npb_bt_a  npb_bt_a          [.] z_solve
+    15.99%  npb_bt_a  npb_bt_a          [.] x_solve
+    14.43%  npb_bt_a  npb_bt_a          [.] y_solve
+    11.49%  npb_bt_a  npb_bt_a          [.] matvec_sub
+    10.89%  npb_bt_a  npb_bt_a          [.] compute_rhs
+     9.13%  npb_bt_a  npb_bt_a          [.] binvcrhs
+     2.88%  npb_bt_a  npb_bt_a          [.] matmul_sub
+     0.18%  npb_bt_a  npb_bt_a          [.] add
+     0.06%  npb_bt_a  npb_bt_a          [.] exact_solution
+     0.06%  npb_bt_a  npb_bt_a          [.] binvrhs
+     0.02%  npb_bt_a  npb_bt_a          [.] exact_rhs
+     0.01%  npb_bt_a  npb_bt_a          [.] lhsinit
+     0.00%  npb_bt_a  libc-2.28.so      [.] printf
+     0.00%  npb_bt_a  npb_bt_a          [.] error_norm
+     0.00%  npb_bt_a  [unknown]         [k] 0xffffffffb8e00278
+     0.00%  npb_bt_a  npb_bt_a          [.] initialize
+
+
+# Samples: 42K of event 'dTLB-loads:u'
+# Event count (approx.): 22224960041
+#
+# Overhead  Command   Shared Object  Symbol            
+# ........  ........  .............  ..................
+#
+    36.15%  npb_bt_a  npb_bt_a       [.] binvcrhs
+    25.66%  npb_bt_a  npb_bt_a       [.] matmul_sub
+     8.67%  npb_bt_a  npb_bt_a       [.] z_solve
+     8.50%  npb_bt_a  npb_bt_a       [.] x_solve
+     8.41%  npb_bt_a  npb_bt_a       [.] y_solve
+     6.73%  npb_bt_a  npb_bt_a       [.] compute_rhs
+     5.22%  npb_bt_a  npb_bt_a       [.] matvec_sub
+     0.22%  npb_bt_a  npb_bt_a       [.] binvrhs
+     0.20%  npb_bt_a  npb_bt_a       [.] exact_solution
+     0.15%  npb_bt_a  npb_bt_a       [.] add
+     0.06%  npb_bt_a  npb_bt_a       [.] exact_rhs
+     0.02%  npb_bt_a  npb_bt_a       [.] error_norm
+     0.01%  npb_bt_a  npb_bt_a       [.] lhsinit
+     0.01%  npb_bt_a  npb_bt_a       [.] initialize
+
+
+# Samples: 13K of event 'dTLB-store-misses:u'
+# Event count (approx.): 261280
+#
+# Overhead  Command   Shared Object  Symbol            
+# ........  ........  .............  ..................
+#
+    28.74%  npb_bt_a  npb_bt_a       [.] binvcrhs
+    27.54%  npb_bt_a  npb_bt_a       [.] matvec_sub
+    14.14%  npb_bt_a  npb_bt_a       [.] compute_rhs
+    12.77%  npb_bt_a  npb_bt_a       [.] z_solve
+     5.48%  npb_bt_a  npb_bt_a       [.] y_solve
+     4.57%  npb_bt_a  npb_bt_a       [.] x_solve
+     3.68%  npb_bt_a  npb_bt_a       [.] matmul_sub
+     2.73%  npb_bt_a  npb_bt_a       [.] lhsinit
+     0.13%  npb_bt_a  npb_bt_a       [.] add
+     0.09%  npb_bt_a  npb_bt_a       [.] binvrhs
+     0.08%  npb_bt_a  npb_bt_a       [.] exact_rhs
+     0.05%  npb_bt_a  npb_bt_a       [.] initialize
+     0.02%  npb_bt_a  npb_bt_a       [.] exact_solution
+
+
+# Samples: 41K of event 'dTLB-stores:u'
+# Event count (approx.): 10520930525
+#
+# Overhead  Command   Shared Object  Symbol            
+# ........  ........  .............  ..................
+#
+    37.83%  npb_bt_a  npb_bt_a       [.] binvcrhs
+    16.67%  npb_bt_a  npb_bt_a       [.] x_solve
+    16.66%  npb_bt_a  npb_bt_a       [.] y_solve
+    16.31%  npb_bt_a  npb_bt_a       [.] z_solve
+     5.29%  npb_bt_a  npb_bt_a       [.] matmul_sub
+     3.79%  npb_bt_a  npb_bt_a       [.] compute_rhs
+     2.51%  npb_bt_a  npb_bt_a       [.] matvec_sub
+     0.48%  npb_bt_a  npb_bt_a       [.] lhsinit
+     0.22%  npb_bt_a  npb_bt_a       [.] binvrhs
+     0.16%  npb_bt_a  npb_bt_a       [.] add
+     0.05%  npb_bt_a  npb_bt_a       [.] exact_solution
+     0.04%  npb_bt_a  npb_bt_a       [.] exact_rhs
+     0.00%  npb_bt_a  npb_bt_a       [.] initialize
+
+
+# Samples: 94  of event 'iTLB-load-misses:u'
+# Event count (approx.): 1266
+#
+# Overhead  Command   Shared Object  Symbol                          
+# ........  ........  .............  ................................
+#
+    17.93%  npb_bt_a  npb_bt_a       [.] compute_rhs
+    15.48%  npb_bt_a  npb_bt_a       [.] lhsinit
+    13.27%  npb_bt_a  npb_bt_a       [.] x_solve
+    11.14%  npb_bt_a  npb_bt_a       [.] adi
+     9.95%  npb_bt_a  npb_bt_a       [.] y_solve
+     9.08%  npb_bt_a  npb_bt_a       [.] add
+     4.42%  npb_bt_a  npb_bt_a       [.] binvcrhs
+     4.42%  npb_bt_a  npb_bt_a       [.] z_solve
+     3.32%  npb_bt_a  npb_bt_a       [.] matmul_sub
+     2.92%  npb_bt_a  libc-2.28.so   [.] _IO_file_xsputn@@GLIBC_2.2.5
+     2.21%  npb_bt_a  npb_bt_a       [.] binvrhs
+     2.21%  npb_bt_a  npb_bt_a       [.] main
+     1.11%  npb_bt_a  libc-2.28.so   [.] printf
+     1.11%  npb_bt_a  libc-2.28.so   [.] vfprintf
+     1.11%  npb_bt_a  npb_bt_a       [.] matvec_sub
+     0.16%  npb_bt_a  npb_bt_a       [.] exact_rhs
+     0.16%  npb_bt_a  npb_bt_a       [.] exact_solution
+
+
+# Samples: 42K of event 'iTLB-loads:u'
+# Event count (approx.): 54684757671
+#
+# Overhead  Command   Shared Object  Symbol            
+# ........  ........  .............  ..................
+#
+    34.33%  npb_bt_a  npb_bt_a       [.] binvcrhs
+    16.76%  npb_bt_a  npb_bt_a       [.] matmul_sub
+    11.91%  npb_bt_a  npb_bt_a       [.] z_solve
+    11.85%  npb_bt_a  npb_bt_a       [.] x_solve
+    11.71%  npb_bt_a  npb_bt_a       [.] y_solve
+     8.72%  npb_bt_a  npb_bt_a       [.] compute_rhs
+     4.04%  npb_bt_a  npb_bt_a       [.] matvec_sub
+     0.19%  npb_bt_a  npb_bt_a       [.] binvrhs
+     0.16%  npb_bt_a  npb_bt_a       [.] add
+     0.15%  npb_bt_a  npb_bt_a       [.] exact_solution
+     0.11%  npb_bt_a  npb_bt_a       [.] lhsinit
+     0.05%  npb_bt_a  npb_bt_a       [.] exact_rhs
+     0.02%  npb_bt_a  npb_bt_a       [.] initialize
+
+
+# Samples: 3  of event 'node-load-misses:u'
+# Event count (approx.): 15
+#
+# Overhead  Command   Shared Object  Symbol      
+# ........  ........  .............  ............
+#
+   100.00%  npb_bt_a  libc-2.28.so   [.] vfprintf
+
+
+# Samples: 29K of event 'node-loads:u'
+# Event count (approx.): 45006755
+#
+# Overhead  Command   Shared Object     Symbol                
+# ........  ........  ................  ......................
+#
+    42.00%  npb_bt_a  npb_bt_a          [.] compute_rhs
+    18.87%  npb_bt_a  npb_bt_a          [.] y_solve
+    13.34%  npb_bt_a  npb_bt_a          [.] z_solve
+     8.71%  npb_bt_a  npb_bt_a          [.] add
+     6.05%  npb_bt_a  npb_bt_a          [.] matmul_sub
+     5.88%  npb_bt_a  npb_bt_a          [.] matvec_sub
+     3.31%  npb_bt_a  npb_bt_a          [.] binvcrhs
+     1.21%  npb_bt_a  npb_bt_a          [.] x_solve
+     0.61%  npb_bt_a  npb_bt_a          [.] lhsinit
+     0.02%  npb_bt_a  npb_bt_a          [.] binvrhs
+     0.00%  npb_bt_a  [unknown]         [k] 0xffffffffb8e01c80
+     0.00%  npb_bt_a  npb_bt_a          [.] exact_rhs
+     0.00%  npb_bt_a  npb_bt_a          [.] exact_solution
+
+
+# Samples: 26  of event 'node-prefetch-misses:u'
+# Event count (approx.): 26
+#
+# Overhead  Command   Shared Object  Symbol         
+# ........  ........  .............  ...............
+#
+    69.23%  npb_bt_a  npb_bt_a       [.] compute_rhs
+    15.38%  npb_bt_a  npb_bt_a       [.] adi
+     7.69%  npb_bt_a  npb_bt_a       [.] add
+     3.85%  npb_bt_a  libc-2.28.so   [.] vfprintf
+     3.85%  npb_bt_a  npb_bt_a       [.] y_solve
+
+
+# Samples: 3K of event 'node-prefetches:u'
+# Event count (approx.): 34484636
+#
+# Overhead  Command   Shared Object  Symbol                           
+# ........  ........  .............  .................................
+#
+    80.80%  npb_bt_a  npb_bt_a       [.] compute_rhs
+     8.64%  npb_bt_a  npb_bt_a       [.] x_solve
+     6.45%  npb_bt_a  npb_bt_a       [.] add
+     2.07%  npb_bt_a  npb_bt_a       [.] matmul_sub
+     1.45%  npb_bt_a  npb_bt_a       [.] binvcrhs
+     0.26%  npb_bt_a  npb_bt_a       [.] matvec_sub
+     0.17%  npb_bt_a  npb_bt_a       [.] lhsinit
+     0.06%  npb_bt_a  npb_bt_a       [.] main
+     0.06%  npb_bt_a  libc-2.28.so   [.] __memmove_sse2_unaligned_erms
+     0.04%  npb_bt_a  npb_bt_a       [.] y_solve
+     0.00%  npb_bt_a  npb_bt_a       [.] exact_solution
+
+
+# Samples: 274  of event 'node-stores:u'
+# Event count (approx.): 1652548
+#
+# Overhead  Command   Shared Object  Symbol            
+# ........  ........  .............  ..................
+#
+    99.92%  npb_bt_a  npb_bt_a       [.] compute_rhs
+     0.06%  npb_bt_a  npb_bt_a       [.] exact_solution
+     0.01%  npb_bt_a  npb_bt_a       [.] z_solve
+
+
+#
+# (Tip: Customize output of perf script with: perf script -F event,ip,sym)
+#

@@ -1,0 +1,68 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 2  of event 'L1-dcache-load-misses:u'
+# Event count (approx.): 2
+#
+# Overhead  Command  Shared Object     Symbol                
+# ........  .......  ................  ......................
+#
+    50.00%  ssca2    ld-2.28.so        [.] _start
+    50.00%  ssca2    [unknown]         [k] 0xffffffffb8e01150
+
+
+# Samples: 7  of event 'L1-dcache-loads:u'
+# Event count (approx.): 27886
+#
+# Overhead  Command  Shared Object     Symbol                  
+# ........  .......  ................  ........................
+#
+    74.70%  ssca2    ld-2.28.so        [.] __GI___tunables_init
+    23.95%  ssca2    ld-2.28.so        [.] _dl_sysdep_start
+     1.33%  ssca2    ld-2.28.so        [.] _dl_start
+     0.01%  ssca2    [unknown]         [k] 0xffffffffb8e01150
+     0.00%  ssca2    ld-2.28.so        [.] _start
+
+
+# Samples: 6  of event 'L1-dcache-prefetch-misses:u'
+# Event count (approx.): 3127
+#
+# Overhead  Command  Shared Object  Symbol                    
+# ........  .......  .............  ..........................
+#
+    75.02%  ssca2    ld-2.28.so     [.] _dl_relocate_object
+    23.76%  ssca2    ld-2.28.so     [.] _dl_cache_libcmp
+     1.22%  ssca2    ld-2.28.so     [.] _dl_map_object_from_fd
+
+
+# Samples: 5  of event 'L1-dcache-store-misses:u'
+# Event count (approx.): 532
+#
+# Overhead  Command  Shared Object     Symbol                
+# ........  .......  ................  ......................
+#
+    94.74%  ssca2    ld-2.28.so        [.] dl_main
+     5.08%  ssca2    ld-2.28.so        [.] _dl_start
+     0.19%  ssca2    [unknown]         [k] 0xffffffffb8e01150
+
+
+# Samples: 9  of event 'L1-dcache-stores:u'
+# Event count (approx.): 29537
+#
+# Overhead  Command  Shared Object  Symbol                    
+# ........  .......  .............  ..........................
+#
+    57.29%  ssca2    ld-2.28.so     [.] check_match
+    28.16%  ssca2    ld-2.28.so     [.] do_lookup_x
+     8.98%  ssca2    ld-2.28.so     [.] _dl_relocate_object
+     5.32%  ssca2    ld-2.28.so     [.] __GI___close_nocancel
+     0.23%  ssca2    ld-2.28.so     [.] mmap64
+     0.01%  ssca2    ld-2.28.so     [.] _dl_map_object_from_fd
+     0.00%  ssca2    ld-2.28.so     [.] mprotect
+
+
+#
+# (Tip: To browse sample contexts use perf report --sample 10 and select in context menu)
+#
