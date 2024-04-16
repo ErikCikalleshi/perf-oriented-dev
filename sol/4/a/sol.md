@@ -4,7 +4,7 @@
 massif-visualizer [massif-data-file] => massif.out.%pid
 ```
 
-As of right now in the 5 variant of the large C program the program with the lowest workload is the one that uses most memory heap with approx. 170 kB. The others are below 160 kb.
+As we can see both programs need to allocate more or less the same amount of memory eventho the workload is different
 
 ### a
 ![alt text](a.png)
