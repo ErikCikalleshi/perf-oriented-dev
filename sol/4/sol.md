@@ -35,112 +35,102 @@ Runtime without massif
 
 
 ## Exercise 2
-I decided to test the npb_bt_a and npb_bt_s programs as comparing one of them with ssca2 would not make sense as it calculates something different and we do not have the same functions inside
 
-L1-dcache-load-misses:u
+
+
 
 a)
 ```	
-# Samples: 31K of event 'L1-dcache-load-misses:u'
-# Event count (approx.): 729337502
-#
-# Overhead  Command   Shared Object  Symbol            
-# ........  ........  .............  ..................
-#
-    21.90%  npb_bt_a  npb_bt_a       [.] z_solve
-    21.86%  npb_bt_a  npb_bt_a       [.] y_solve
-    16.54%  npb_bt_a  npb_bt_a       [.] x_solve
-    13.70%  npb_bt_a  npb_bt_a       [.] compute_rhs
-    12.02%  npb_bt_a  npb_bt_a       [.] binvcrhs
-     7.35%  npb_bt_a  npb_bt_a       [.] matvec_sub
-     4.86%  npb_bt_a  npb_bt_a       [.] matmul_sub
-     0.93%  npb_bt_a  npb_bt_a       [.] add
-     0.78%  npb_bt_a  npb_bt_a       [.] lhsinit
-     0.05%  npb_bt_a  npb_bt_a       [.] binvrhs
-     0.01%  npb_bt_a  npb_bt_a       [.] exact_rhs
-     0.00%  npb_bt_a  npb_bt_a       [.] exact_solution
-     0.00%  npb_bt_a  npb_bt_a       [.] initialize
+ Performance counter stats for './npb_bt_a':
+     6,851,824,686      L1-dcache-load-misses:u   #    4.37% of all L1-dcache accesses  (10.71%)
+   156,737,123,628      L1-dcache-loads:u                                             (14.29%)
+     4,765,522,189      L1-dcache-prefetch-misses:u                                     (14.29%)
+               398      L1-dcache-prefetches:u                                        (14.29%)
+     2,427,321,825      L1-dcache-store-misses:u                                      (14.29%)
+    73,845,614,252      L1-dcache-stores:u                                            (14.29%)
+        48,642,427      L1-icache-load-misses:u   #    0.03% of all L1-icache accesses  (14.29%)
+   141,648,487,195      L1-icache-loads:u                                             (14.29%)
+       311,232,083      LLC-load-misses:u         #   52.23% of all LL-cache accesses  (14.29%)
+       595,937,592      LLC-loads:u                                                   (14.29%)
+       501,148,957      LLC-prefetch-misses:u                                         (7.14%)
+       803,756,368      LLC-prefetches:u                                              (7.14%)
+        32,216,513      LLC-store-misses:u                                            (7.14%)
+       456,636,730      LLC-stores:u                                                  (7.14%)
+     1,832,202,799      branch-load-misses:u                                          (10.71%)
+     1,852,559,669      branch-loads:u                                                (14.28%)
+         1,198,828      dTLB-load-misses:u        #    0.00% of all dTLB cache accesses  (14.28%)
+   156,727,712,592      dTLB-loads:u                                                  (14.28%)
+           304,426      dTLB-store-misses:u                                           (14.28%)
+    73,961,570,202      dTLB-stores:u                                                 (14.28%)
+             5,488      iTLB-load-misses:u        #    0.00% of all iTLB cache accesses  (14.28%)
+   383,391,530,027      iTLB-loads:u                                                  (14.28%)
+               560      node-load-misses:u                                            (14.28%)
+       301,907,089      node-loads:u                                                  (14.28%)
+             1,484      node-prefetch-misses:u                                        (7.14%)
+       475,242,662      node-prefetches:u                                             (7.14%)
+                 0      node-store-misses:u                                           (7.14%)
+        25,147,355      node-stores:u                                                 (7.14%)
+
+      73.650137967 seconds time elapsed
+
+      72.723236000 seconds user
+       0.012604000 seconds sys
 ```	
 
 s)
 ```
-#
-# Samples: 8  of event 'L1-dcache-load-misses:u'
-# Event count (approx.): 177698
-#
-# Overhead  Command   Shared Object  Symbol         
-# ........  ........  .............  ...............
-#
-    46.36%  npb_bt_s  npb_bt_s       [.] x_solve
-    28.29%  npb_bt_s  npb_bt_s       [.] compute_rhs
-    25.36%  npb_bt_s  npb_bt_s       [.] add
+ Performance counter stats for './ssca2 17':
 
+     4,130,196,129      L1-dcache-load-misses:u   #   36.42% of all L1-dcache accesses  (10.71%)
+    11,341,237,747      L1-dcache-loads:u                                             (14.28%)
+       483,874,456      L1-dcache-prefetch-misses:u                                     (14.28%)
+           836,558      L1-dcache-prefetches:u                                        (14.28%)
+       647,540,900      L1-dcache-store-misses:u                                      (14.29%)
+     2,647,752,876      L1-dcache-stores:u                                            (14.29%)
+           546,805      L1-icache-load-misses:u   #    0.00% of all L1-icache accesses  (14.29%)
+    32,075,225,580      L1-icache-loads:u                                             (14.29%)
+       290,288,003      LLC-load-misses:u         #   10.22% of all LL-cache accesses  (14.29%)
+     2,840,829,137      LLC-loads:u                                                   (14.29%)
+         1,229,459      LLC-prefetch-misses:u                                         (7.14%)
+         4,755,109      LLC-prefetches:u                                              (7.14%)
+        39,641,754      LLC-store-misses:u                                            (7.14%)
+     1,911,332,731      LLC-stores:u                                                  (7.14%)
+    10,819,311,257      branch-load-misses:u                                          (10.72%)
+     5,853,271,583      branch-loads:u                                                (14.29%)
+       729,368,723      dTLB-load-misses:u        #    6.41% of all dTLB cache accesses  (14.29%)
+    11,384,895,643      dTLB-loads:u                                                  (14.29%)
+       140,237,284      dTLB-store-misses:u                                           (14.29%)
+     2,668,668,444      dTLB-stores:u                                                 (14.29%)
+           235,872      iTLB-load-misses:u        #    0.00% of all iTLB cache accesses  (14.29%)
+    34,355,222,136      iTLB-loads:u                                                  (14.29%)
+               300      node-load-misses:u                                            (14.29%)
+       288,325,059      node-loads:u                                                  (14.29%)
+             1,329      node-prefetch-misses:u                                        (7.14%)
+         1,130,419      node-prefetches:u                                             (7.14%)
+                 0      node-store-misses:u                                           (7.14%)
+        39,532,648      node-stores:u                                                 (7.14%)
+
+      26.739826313 seconds time elapsed
+
+      26.348368000 seconds user
+       0.014802000 seconds sys
 ```
 
-As we can see the s has less event counts because of the workload. The a has more event counts because of the workload. The functions that are most responsible for the cache misses are x_solve, compute_rhs, add.
+L1 Cache:
+- ssca2 has a significantly higher L1 cache miss rate (36.42%) compared to npb_bt_a (4.37%).
+
+LLC (Last Level Cache):
+- npb_bt_a has a higher LLC miss rate (52.23%) compared to ssca2 (10.22%).
+
+Branches:
+- ssca2 has a much higher number of branch load misses, indicating potentially less optimized branch prediction.
+
+TLB (Translation Lookaside Buffer):
+- ssca2 has more dTLB load misses, suggesting more frequent translation cache misses.
 
 
-L1-dcache-loads:u
-
-a)
-```
-# Samples: 42K of event 'L1-dcache-loads:u'
-# Event count (approx.): 22279931726
-#
-# Overhead  Command   Shared Object     Symbol                  
-# ........  ........  ................  ........................
-#
-    35.86%  npb_bt_a  npb_bt_a          [.] binvcrhs
-    26.02%  npb_bt_a  npb_bt_a          [.] matmul_sub
-     8.52%  npb_bt_a  npb_bt_a          [.] x_solve
-     8.46%  npb_bt_a  npb_bt_a          [.] z_solve
-     8.42%  npb_bt_a  npb_bt_a          [.] y_solve
-     6.72%  npb_bt_a  npb_bt_a          [.] compute_rhs
-     5.35%  npb_bt_a  npb_bt_a          [.] matvec_sub
-     0.23%  npb_bt_a  npb_bt_a          [.] binvrhs
-     0.17%  npb_bt_a  npb_bt_a          [.] exact_solution
-     0.15%  npb_bt_a  npb_bt_a          [.] add
-     0.05%  npb_bt_a  npb_bt_a          [.] exact_rhs
-     0.02%  npb_bt_a  npb_bt_a          [.] initialize
-     0.01%  npb_bt_a  npb_bt_a          [.] lhsinit
-     0.00%  npb_bt_a  ld-2.28.so        [.] do_lookup_x
-     0.00%  npb_bt_a  ld-2.28.so        [.] __GI___tunables_init
-     0.00%  npb_bt_a  ld-2.28.so        [.] _dl_start
-     0.00%  npb_bt_a  [unknown]         [k] 0xffffffffb8e01150
-     0.00%  npb_bt_a  ld-2.28.so        [.] _start
-```
-
-s)
-```
-
-# Samples: 63  of event 'L1-dcache-loads:u'
-# Event count (approx.): 28650606
-#
-# Overhead  Command   Shared Object     Symbol                  
-# ........  ........  ................  ........................
-#
-    44.94%  npb_bt_s  npb_bt_s          [.] binvcrhs
-    20.08%  npb_bt_s  npb_bt_s          [.] matmul_sub
-    10.63%  npb_bt_s  npb_bt_s          [.] x_solve
-    10.00%  npb_bt_s  npb_bt_s          [.] z_solve
-     9.27%  npb_bt_s  npb_bt_s          [.] compute_rhs
-     1.91%  npb_bt_s  npb_bt_s          [.] y_solve
-     1.51%  npb_bt_s  npb_bt_s          [.] exact_solution
-     1.11%  npb_bt_s  npb_bt_s          [.] matvec_sub
-     0.26%  npb_bt_s  ld-2.28.so        [.] _dl_relocate_object
-     0.24%  npb_bt_s  npb_bt_s          [.] initialize
-     0.05%  npb_bt_s  ld-2.28.so        [.] __GI___tunables_init
-     0.00%  npb_bt_s  ld-2.28.so        [.] _dl_start
-     0.00%  npb_bt_s  [unknown]         [k] 0xffffffffb8e01150
-     0.00%  npb_bt_s  ld-2.28.so        [.] _start
-
-```
-
-We can see the difference in sample counts. If we leave out the workload, the function order with more cache misses are the same. The functions that are most responsible for the cache misses are binvcrhs, matmul_sub, x_solve, z_solve, compute_rhs.
-
-
-### Conclusion
-In overall the spread is very similar but often also difffernt so we can not make a general conclusion. The workload is the most important factor in this case.
+### Conclusion 
+In summary, ssca2 experiences higher cache miss rates across different levels compared to npb_bt_a. This suggests potential inefficiencies in memory access and branch prediction in ssca2. Further optimization efforts may be needed to enhance its performance.
 
 ### Time influence
 npb_bt_a:
