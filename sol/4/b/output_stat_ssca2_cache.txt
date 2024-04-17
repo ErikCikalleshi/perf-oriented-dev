@@ -1,0 +1,36 @@
+ Performance counter stats for './ssca2 17':
+
+     4,130,196,129      L1-dcache-load-misses:u   #   36.42% of all L1-dcache accesses  (10.71%)
+    11,341,237,747      L1-dcache-loads:u                                             (14.28%)
+       483,874,456      L1-dcache-prefetch-misses:u                                     (14.28%)
+           836,558      L1-dcache-prefetches:u                                        (14.28%)
+       647,540,900      L1-dcache-store-misses:u                                      (14.29%)
+     2,647,752,876      L1-dcache-stores:u                                            (14.29%)
+           546,805      L1-icache-load-misses:u   #    0.00% of all L1-icache accesses  (14.29%)
+    32,075,225,580      L1-icache-loads:u                                             (14.29%)
+       290,288,003      LLC-load-misses:u         #   10.22% of all LL-cache accesses  (14.29%)
+     2,840,829,137      LLC-loads:u                                                   (14.29%)
+         1,229,459      LLC-prefetch-misses:u                                         (7.14%)
+         4,755,109      LLC-prefetches:u                                              (7.14%)
+        39,641,754      LLC-store-misses:u                                            (7.14%)
+     1,911,332,731      LLC-stores:u                                                  (7.14%)
+    10,819,311,257      branch-load-misses:u                                          (10.72%)
+     5,853,271,583      branch-loads:u                                                (14.29%)
+       729,368,723      dTLB-load-misses:u        #    6.41% of all dTLB cache accesses  (14.29%)
+    11,384,895,643      dTLB-loads:u                                                  (14.29%)
+       140,237,284      dTLB-store-misses:u                                           (14.29%)
+     2,668,668,444      dTLB-stores:u                                                 (14.29%)
+           235,872      iTLB-load-misses:u        #    0.00% of all iTLB cache accesses  (14.29%)
+    34,355,222,136      iTLB-loads:u                                                  (14.29%)
+               300      node-load-misses:u                                            (14.29%)
+       288,325,059      node-loads:u                                                  (14.29%)
+             1,329      node-prefetch-misses:u                                        (7.14%)
+         1,130,419      node-prefetches:u                                             (7.14%)
+                 0      node-store-misses:u                                           (7.14%)
+        39,532,648      node-stores:u                                                 (7.14%)
+
+      26.739826313 seconds time elapsed
+
+      26.348368000 seconds user
+       0.014802000 seconds sys
+

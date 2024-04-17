@@ -1,0 +1,34 @@
+ Performance counter stats for './npb_bt_a':
+     6,851,824,686      L1-dcache-load-misses:u   #    4.37% of all L1-dcache accesses  (10.71%)
+   156,737,123,628      L1-dcache-loads:u                                             (14.29%)
+     4,765,522,189      L1-dcache-prefetch-misses:u                                     (14.29%)
+               398      L1-dcache-prefetches:u                                        (14.29%)
+     2,427,321,825      L1-dcache-store-misses:u                                      (14.29%)
+    73,845,614,252      L1-dcache-stores:u                                            (14.29%)
+        48,642,427      L1-icache-load-misses:u   #    0.03% of all L1-icache accesses  (14.29%)
+   141,648,487,195      L1-icache-loads:u                                             (14.29%)
+       311,232,083      LLC-load-misses:u         #   52.23% of all LL-cache accesses  (14.29%)
+       595,937,592      LLC-loads:u                                                   (14.29%)
+       501,148,957      LLC-prefetch-misses:u                                         (7.14%)
+       803,756,368      LLC-prefetches:u                                              (7.14%)
+        32,216,513      LLC-store-misses:u                                            (7.14%)
+       456,636,730      LLC-stores:u                                                  (7.14%)
+     1,832,202,799      branch-load-misses:u                                          (10.71%)
+     1,852,559,669      branch-loads:u                                                (14.28%)
+         1,198,828      dTLB-load-misses:u        #    0.00% of all dTLB cache accesses  (14.28%)
+   156,727,712,592      dTLB-loads:u                                                  (14.28%)
+           304,426      dTLB-store-misses:u                                           (14.28%)
+    73,961,570,202      dTLB-stores:u                                                 (14.28%)
+             5,488      iTLB-load-misses:u        #    0.00% of all iTLB cache accesses  (14.28%)
+   383,391,530,027      iTLB-loads:u                                                  (14.28%)
+               560      node-load-misses:u                                            (14.28%)
+       301,907,089      node-loads:u                                                  (14.28%)
+             1,484      node-prefetch-misses:u                                        (7.14%)
+       475,242,662      node-prefetches:u                                             (7.14%)
+                 0      node-store-misses:u                                           (7.14%)
+        25,147,355      node-stores:u                                                 (7.14%)
+
+      73.650137967 seconds time elapsed
+
+      72.723236000 seconds user
+       0.012604000 seconds sys
