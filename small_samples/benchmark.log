@@ -1,0 +1,6 @@
+python
+cc1: warning: '-Werror=' argument '-funroll-completely-grow-size' is not valid for C
+cc1: warning: '-Werror=' argument '-funroll-completely-grow-size' is not valid for C
+cc1: warning: '-Werror=' argument '-funroll-completely-grow-size' is not valid for C
+cc1: warning: '-Werror=' argument '-funroll-completely-grow-size' is not valid for C
+Execution completed and timing data saved to CSV files.

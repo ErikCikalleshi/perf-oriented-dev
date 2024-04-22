@@ -1,0 +1,48 @@
+Program: mmul, Optimization Level: 0, Execution Time (s): 0.00
+Program: nbody M=400, Optimization Level: 0, Execution Time (s): 0.00
+Program: qap chr15c.dat, Optimization Level: 0, Execution Time (s): 0.00
+Program: delannoy 13, Optimization Level: 0, Execution Time (s): 0.00
+Program: mmul, Optimization Level: 1, Execution Time (s): 0.00
+Program: nbody M=400, Optimization Level: 1, Execution Time (s): 0.00
+Program: qap chr15c.dat, Optimization Level: 1, Execution Time (s): 0.00
+Program: delannoy 13, Optimization Level: 1, Execution Time (s): 0.00
+Program: mmul, Optimization Level: 2, Execution Time (s): 0.00
+Program: nbody M=400, Optimization Level: 2, Execution Time (s): 0.00
+Program: qap chr15c.dat, Optimization Level: 2, Execution Time (s): 0.00
+Program: delannoy 13, Optimization Level: 2, Execution Time (s): 0.00
+Program: mmul, Optimization Level: 3, Execution Time (s): 0.00
+Program: nbody M=400, Optimization Level: 3, Execution Time (s): 0.00
+Program: qap chr15c.dat, Optimization Level: 3, Execution Time (s): 0.00
+Program: delannoy 13, Optimization Level: 3, Execution Time (s): 0.00
+Program: mmul, Optimization Level: s, Execution Time (s): 0.00
+Program: nbody M=400, Optimization Level: s, Execution Time (s): 0.00
+Program: qap chr15c.dat, Optimization Level: s, Execution Time (s): 0.00
+Program: delannoy 13, Optimization Level: s, Execution Time (s): 0.00
+Program: mmul, Optimization Level: fast, Execution Time (s): 0.00
+Program: nbody M=400, Optimization Level: fast, Execution Time (s): 0.00
+Program: qap chr15c.dat, Optimization Level: fast, Execution Time (s): 0.00
+Program: delannoy 13, Optimization Level: fast, Execution Time (s): 0.00
+Program: mmul, Optimization Level: 0, Execution Time (s): 0.00
+Program: nbody 400, Optimization Level: 0, Execution Time (s): 0.00
+Program: qap chr15c.dat, Optimization Level: 0, Execution Time (s): 0.00
+Program: delannoy 13, Optimization Level: 0, Execution Time (s): 0.00
+Program: mmul, Optimization Level: 1, Execution Time (s): 0.00
+Program: nbody 400, Optimization Level: 1, Execution Time (s): 0.00
+Program: qap chr15c.dat, Optimization Level: 1, Execution Time (s): 0.00
+Program: delannoy 13, Optimization Level: 1, Execution Time (s): 0.00
+Program: mmul, Optimization Level: 2, Execution Time (s): 0.00
+Program: nbody 400, Optimization Level: 2, Execution Time (s): 0.00
+Program: qap chr15c.dat, Optimization Level: 2, Execution Time (s): 0.00
+Program: delannoy 13, Optimization Level: 2, Execution Time (s): 0.00
+Program: mmul, Optimization Level: 3, Execution Time (s): 0.00
+Program: nbody 400, Optimization Level: 3, Execution Time (s): 0.00
+Program: qap chr15c.dat, Optimization Level: 3, Execution Time (s): 0.00
+Program: delannoy 13, Optimization Level: 3, Execution Time (s): 0.00
+Program: mmul, Optimization Level: s, Execution Time (s): 0.00
+Program: nbody 400, Optimization Level: s, Execution Time (s): 0.00
+Program: qap chr15c.dat, Optimization Level: s, Execution Time (s): 0.00
+Program: delannoy 13, Optimization Level: s, Execution Time (s): 0.00
+Program: mmul, Optimization Level: fast, Execution Time (s): 0.00
+Program: nbody 400, Optimization Level: fast, Execution Time (s): 0.00
+Program: qap chr15c.dat, Optimization Level: fast, Execution Time (s): 0.00
+Program: delannoy 13, Optimization Level: fast, Execution Time (s): 0.00

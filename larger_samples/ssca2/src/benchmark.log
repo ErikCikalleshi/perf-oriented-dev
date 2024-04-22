@@ -1,0 +1,331 @@
+mkdir: cannot create directory ‘build’: File exists
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/cb76/cb761222/perf-oriented-dev/larger_samples/ssca2/build
+[  3%] Building C object CMakeFiles/ssca2.dir/src/SSCA2.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[  7%] Building C object CMakeFiles/ssca2.dir/src/betweennessCentrality.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 11%] Building C object CMakeFiles/ssca2.dir/src/computeGraph.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 15%] Building C object CMakeFiles/ssca2.dir/src/findSubGraphs.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 19%] Building C object CMakeFiles/ssca2.dir/src/gen2DTorus.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 23%] Building C object CMakeFiles/ssca2.dir/src/genScalData.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 26%] Building C object CMakeFiles/ssca2.dir/src/getStartLists.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 30%] Building C object CMakeFiles/ssca2.dir/src/init.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 34%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/checkid.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 38%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/cmrg.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 42%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/communicate.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 46%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/cputime.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 50%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/fwrap_mpi.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 53%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/lcg.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 57%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/lcg64.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 61%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/lfg.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 65%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/makeseed.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 69%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/memory.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 73%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/mlfg.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 76%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/primes_32.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 80%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/primes_64.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 84%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/simple_mpi.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 88%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/sprng.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 92%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/store.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 96%] Building C object CMakeFiles/ssca2.dir/src/utils.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[100%] Linking C executable ssca2
+[100%] Built target ssca2
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/cb76/cb761222/perf-oriented-dev/larger_samples/ssca2/build
+[  3%] Building C object CMakeFiles/ssca2.dir/src/SSCA2.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[  7%] Building C object CMakeFiles/ssca2.dir/src/betweennessCentrality.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 11%] Building C object CMakeFiles/ssca2.dir/src/computeGraph.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 15%] Building C object CMakeFiles/ssca2.dir/src/findSubGraphs.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 19%] Building C object CMakeFiles/ssca2.dir/src/gen2DTorus.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 23%] Building C object CMakeFiles/ssca2.dir/src/genScalData.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 26%] Building C object CMakeFiles/ssca2.dir/src/getStartLists.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 30%] Building C object CMakeFiles/ssca2.dir/src/init.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 34%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/checkid.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 38%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/cmrg.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 42%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/communicate.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 46%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/cputime.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 50%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/fwrap_mpi.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 53%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/lcg.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 57%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/lcg64.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 61%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/lfg.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 65%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/makeseed.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 69%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/memory.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 73%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/mlfg.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 76%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/primes_32.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 80%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/primes_64.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 84%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/simple_mpi.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 88%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/sprng.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 92%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/store.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 96%] Building C object CMakeFiles/ssca2.dir/src/utils.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[100%] Linking C executable ssca2
+[100%] Built target ssca2
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/cb76/cb761222/perf-oriented-dev/larger_samples/ssca2/build
+[  3%] Building C object CMakeFiles/ssca2.dir/src/SSCA2.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[  7%] Building C object CMakeFiles/ssca2.dir/src/betweennessCentrality.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 11%] Building C object CMakeFiles/ssca2.dir/src/computeGraph.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 15%] Building C object CMakeFiles/ssca2.dir/src/findSubGraphs.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 19%] Building C object CMakeFiles/ssca2.dir/src/gen2DTorus.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 23%] Building C object CMakeFiles/ssca2.dir/src/genScalData.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 26%] Building C object CMakeFiles/ssca2.dir/src/getStartLists.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 30%] Building C object CMakeFiles/ssca2.dir/src/init.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 34%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/checkid.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 38%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/cmrg.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 42%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/communicate.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 46%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/cputime.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 50%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/fwrap_mpi.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 53%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/lcg.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 57%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/lcg64.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 61%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/lfg.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 65%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/makeseed.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 69%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/memory.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 73%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/mlfg.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 76%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/primes_32.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 80%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/primes_64.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 84%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/simple_mpi.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 88%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/sprng.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 92%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/store.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 96%] Building C object CMakeFiles/ssca2.dir/src/utils.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[100%] Linking C executable ssca2
+[100%] Built target ssca2
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/cb76/cb761222/perf-oriented-dev/larger_samples/ssca2/build
+[  3%] Building C object CMakeFiles/ssca2.dir/src/SSCA2.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[  7%] Building C object CMakeFiles/ssca2.dir/src/betweennessCentrality.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 11%] Building C object CMakeFiles/ssca2.dir/src/computeGraph.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 15%] Building C object CMakeFiles/ssca2.dir/src/findSubGraphs.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 19%] Building C object CMakeFiles/ssca2.dir/src/gen2DTorus.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 23%] Building C object CMakeFiles/ssca2.dir/src/genScalData.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 26%] Building C object CMakeFiles/ssca2.dir/src/getStartLists.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 30%] Building C object CMakeFiles/ssca2.dir/src/init.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 34%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/checkid.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 38%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/cmrg.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 42%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/communicate.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 46%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/cputime.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 50%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/fwrap_mpi.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 53%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/lcg.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 57%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/lcg64.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 61%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/lfg.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 65%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/makeseed.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 69%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/memory.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 73%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/mlfg.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 76%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/primes_32.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 80%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/primes_64.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 84%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/simple_mpi.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 88%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/sprng.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 92%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/store.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 96%] Building C object CMakeFiles/ssca2.dir/src/utils.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[100%] Linking C executable ssca2
+[100%] Built target ssca2
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/cb76/cb761222/perf-oriented-dev/larger_samples/ssca2/build
+[  3%] Building C object CMakeFiles/ssca2.dir/src/SSCA2.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[  7%] Building C object CMakeFiles/ssca2.dir/src/betweennessCentrality.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 11%] Building C object CMakeFiles/ssca2.dir/src/computeGraph.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 15%] Building C object CMakeFiles/ssca2.dir/src/findSubGraphs.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 19%] Building C object CMakeFiles/ssca2.dir/src/gen2DTorus.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 23%] Building C object CMakeFiles/ssca2.dir/src/genScalData.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 26%] Building C object CMakeFiles/ssca2.dir/src/getStartLists.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 30%] Building C object CMakeFiles/ssca2.dir/src/init.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 34%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/checkid.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 38%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/cmrg.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 42%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/communicate.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 46%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/cputime.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 50%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/fwrap_mpi.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 53%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/lcg.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 57%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/lcg64.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 61%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/lfg.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 65%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/makeseed.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 69%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/memory.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 73%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/mlfg.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 76%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/primes_32.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 80%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/primes_64.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 84%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/simple_mpi.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 88%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/sprng.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 92%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/store.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 96%] Building C object CMakeFiles/ssca2.dir/src/utils.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[100%] Linking C executable ssca2
+[100%] Built target ssca2
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/cb76/cb761222/perf-oriented-dev/larger_samples/ssca2/build
+[  3%] Building C object CMakeFiles/ssca2.dir/src/SSCA2.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[  7%] Building C object CMakeFiles/ssca2.dir/src/betweennessCentrality.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 11%] Building C object CMakeFiles/ssca2.dir/src/computeGraph.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 15%] Building C object CMakeFiles/ssca2.dir/src/findSubGraphs.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 19%] Building C object CMakeFiles/ssca2.dir/src/gen2DTorus.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 23%] Building C object CMakeFiles/ssca2.dir/src/genScalData.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 26%] Building C object CMakeFiles/ssca2.dir/src/getStartLists.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 30%] Building C object CMakeFiles/ssca2.dir/src/init.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 34%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/checkid.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 38%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/cmrg.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 42%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/communicate.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 46%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/cputime.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 50%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/fwrap_mpi.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 53%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/lcg.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 57%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/lcg64.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 61%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/lfg.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 65%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/makeseed.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 69%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/memory.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 73%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/mlfg.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 76%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/primes_32.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 80%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/primes_64.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 84%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/simple_mpi.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 88%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/sprng.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 92%] Building C object CMakeFiles/ssca2.dir/src/sprng2.0/store.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[ 96%] Building C object CMakeFiles/ssca2.dir/src/utils.c.o
+<command-line>: warning: ISO C99 requires whitespace after the macro name
+[100%] Linking C executable ssca2
+[100%] Built target ssca2
