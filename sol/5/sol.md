@@ -42,3 +42,83 @@ As expected the execution time gets faster with every higher flag. Os does the c
 
 ### Conclusion
 As we can see the optimization flags help to reduce the execution time often by factor = 2,3,4. The flag Os is no any case better than the other flags except O0. Astonishing the Ofast flag can sometimes improve the performance but it should be used carfully since we often perform mathematical equations and precision is very important.
+
+
+### Exercise 2
+
+1. Delannoy: Times very very similar.
+    - Most meaningful option: **funswitch-loops, floop-interchange**
+    - Worst ftree-partial-pre
+2. mmul: Times very very similar.
+    - Most meaningful option: **ftree-loop-distribution**
+    - Worst ftree-partial-pre
+3.  nbody: Times are exactly equal.
+    - Most meaningful option: None
+    - Worst floop-interchange
+4. qap
+    - seg faults
+5. ssca2
+    - Most meaningful option: **fgcse-after-reload, fpredictive-commoning**
+    - Worst ftree-loop-distribute-patterns
+6. npb_bt_w
+    - Most meaningful option: **ftree-loop-distribute-patterns, floop-unroll-and-jam**
+    - Worst ftree-partial-pre
+
+Top 3:
+
+1. ftree-loop-distribution in mmul 
+
+    Performs loop distribution; can improve cache performance on big loops => allows loop vectorization or parallelization
+    ```
+        DO I = 1, N
+        A(I) = B(I) + C
+        D(I) = E(I) * F
+        ENDDO
+    ```
+    ```
+        DO I = 1, N
+        A(I) = B(I) + C
+        ENDDO
+        DO I = 1, N
+        D(I) = E(I) * F
+        ENDDO
+    ```    
+    Note: ftree-loop-distribute-patterns => same but on code generated from libraries
+
+2. fgcse-after-reload on ssca2
+    When the flag -fgcse-after-reload is activated, it triggers a redundant load elimination process after reloading.
+
+    ```c
+    #include <stdio.h>
+
+    int main() {
+        int a = 5;
+        int b = 10;
+        int c;
+
+        c = a + b;
+        printf("Sum: %d\n", c);
+
+        return 0;
+    }
+
+    ```
+
+    ```c
+    #include <stdio.h>
+
+    int main() {
+        int c;
+
+        c = 5 + 10; //Note here
+        printf("Sum: %d\n", c);
+
+        return 0;
+    }
+
+
+    ```
+
+3. funswitch-loops from delannoy:
+    The compiler moves branches with loop-invariant conditions out of the loop. 
+    This helps optimize the loop by reducing branch mispredictions.
