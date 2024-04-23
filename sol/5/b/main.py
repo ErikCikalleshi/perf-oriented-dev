@@ -1,56 +1,76 @@
 import subprocess
-import itertools
 import os
+import csv
 
-# Function to parse gcc output and extract optimization flags
-def parse_optimization_flags(output):
-    flags = set()
-    for line in output.splitlines():
-        flag = line.strip().split()[1]
-        flags.add(flag)
-    return flags
-
-# Function to compare optimization flags between two optimization levels
-def compare_optimization_flags(optimization_level1, optimization_level2):
-    flags1 = parse_optimization_flags(optimization_level1)
-    flags2 = parse_optimization_flags(optimization_level2)
-    return flags2 - flags1  # Flags present in level2 but not in level1
-
-# Function to compile a program with specific optimization flags
-def compile_with_flags(program, flags):
-    command = ['gcc', '-o', 'compiled_program', program] + list(flags)
-    subprocess.run(command, check=True)
-
-# Function to run a compiled program
-def run_program():
-    subprocess.run(['./compiled_program'], check=True)
-
-# Test cases and their configurations
-test_cases = {
-    'mmul': {'dir': 'mmul', 'program': 'mmul.c', 'flags': ['-DS=1000']},
-    'nbody': {'dir': 'nbody', 'program': 'nbody.c', 'flags': ['-DM=400']},
-    'qap': {'dir': 'qap', 'program': 'qap.c', 'flags': ['chr15c.dat']},
-    'delannoy': {'dir': 'delannoy', 'program': 'delannoy.c', 'flags': ['13']},
+os.chdir("/home/cb76/cb761222/perf-oriented-dev/small_samples")
+# List of programs and their configurations
+programs = {
+    "mmul": [],
+    "nbody": ["400"],
+    "qap": ["chr15c.dat"],
+    "delannoy": ["13"],
+    # "npb_bt": ["W"],
+    # "ssca": ["15"]
 }
 
-# Get optimization flags for -O2 and -O3
-opt_flags_o2 = subprocess.check_output(['gcc', '-Q', '--help=optimizers', '-O2'], text=True)
-opt_flags_o3 = subprocess.check_output(['gcc', '-Q', '--help=optimizers', '-O3'], text=True)
+# Compiler optimization flags at -O2 and -O3 levels
+O2_flags = ["-O2"]
+O3_flags = ["-O3"]
 
-# Identify flags that change from -O2 to -O3
-changed_flags = compare_optimization_flags(opt_flags_o2, opt_flags_o3)
+# Get compiler optimization flags at -O3 level
+output = subprocess.check_output(["gcc", "-Q", "--help=optimizers", "-O3"]).decode()
 
-# Compile and run test cases with each changed flag individually
-for flag in changed_flags:
-    print(f"Testing flag: {flag}")
-    for case, config in test_cases.items():
-        dir_name = config['dir']
-        program = config['program']
-        flags = config['flags']
-        try:
-            os.chdir(dir_name)  # Change directory to where source files are located
-            compile_with_flags(program, flags + [f'-{flag}'])
-            run_program()
-            os.chdir("..")  # Change back to the original directory
-        except subprocess.CalledProcessError as e:
-            print(f"Error compiling/running {program} with flag {flag}: {e}")
+for line in output.split('\n'):
+    if line.startswith('  -'):
+        parts = line.split()
+        if '=' in parts[0]:
+            continue
+        if '[enabled]' in line:
+            O3_flags.append(parts[0])
+
+# Get compiler optimization flags at -O2 level
+output = subprocess.check_output(["gcc", "-Q", "--help=optimizers", "-O2"]).decode()
+for line in output.split('\n'):
+    if line.startswith('  -'):
+        parts = line.split()
+        if '=' in parts[0]:
+            continue
+        if '[enabled]' in line:
+            O2_flags.append(parts[0])
+
+# Determine the set of flags that changes from -O2 to -O3
+changed_flags = set(O3_flags) - set(O2_flags)
+
+# Execute programs with each individual optimization flag toggled to -O3 level
+results = {}
+for prog, config in programs.items():
+    timing_data = []
+    for flag in changed_flags:
+        # Construct the output filename
+        output_filename = f"{prog}_{flag}"
+        # Create a build directory if it doesn't exist
+        build_dir = f"build_{prog}"
+        os.makedirs(build_dir, exist_ok=True)
+        # Change to the build directory
+        os.chdir(build_dir)
+        # Compile the program
+        cmd = ["gcc", "-o", output_filename, f"../{prog}/{prog}.c", "-lm", "-Wno-unused-result", "-Wall", "-Wextra", "-pedantic", "-O2"] + [f"{flag}"]
+        subprocess.run(cmd)
+        # Change back to the original directory
+
+        # Run the program with /bin/time
+        benchmark = f"./{prog}_{flag}" + " " + " ".join(config)
+        result = subprocess.run(["/bin/time", "-f", "%e;%U;%S;%M"] + benchmark.split(), stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        real_time = result.stderr.decode().strip().split(";")[0]  # Extract real time
+        timing_data.append((flag, real_time))
+        os.chdir("..")
+    
+    # Save timing data to CSV for the current program
+    csv_filename = f"{prog}.csv"
+    with open(csv_filename, mode='w', newline='') as csvfile:
+        writer = csv.writer(csvfile)
+        writer.writerow(["Flag", "Real Time"])
+        for flag, real_time in timing_data:
+            writer.writerow([flag, real_time])
+
+print("Execution completed and timing data saved to CSV files.")

@@ -2,15 +2,15 @@ import subprocess
 import os
 import csv
 
-os.chdir("/home/cb76/cb761222/perf-oriented-dev/small_samples")
+os.chdir("/home/cb76/cb761222/perf-oriented-dev/larger_samples/npb_bt")
 # List of programs and their configurations
 programs = {
     # "mmul": [],
     # "nbody": ["400"],
     # "qap": ["chr15c.dat"],
     # "delannoy": ["13"],
-    # "npb_bt": ["W"],
-    "ssca": ["15"]
+    "npb_bt_w": [""],
+    # "ssca2": ["15"]
 }
 
 # Compiler optimization flags at -O2 and -O3 levels
@@ -45,24 +45,25 @@ changed_flags = set(O3_flags) - set(O2_flags)
 results = {}
 for prog, config in programs.items():
     timing_data = []
+    build_dir = f"build_{prog}"
+    os.makedirs(build_dir, exist_ok=True)
     for flag in changed_flags:
         # Construct the output filename
         output_filename = f"{prog}_{flag}"
-        # Create a build directory if it doesn't exist
-        build_dir = f"build_{prog}"
-        os.makedirs(build_dir, exist_ok=True)
         # Change to the build directory
         os.chdir(build_dir)
-        # Compile the program
-        cmd = ["gcc", "-o", output_filename, f"../{prog}/{prog}.c", "-lm", "-Wno-unused-result", "-Wall", "-Wextra", "-pedantic", "-O2"] + [f"{flag}"]
-        subprocess.run(cmd)
-        # Change back to the original directory
-
-        # Run the program with /bin/time
-        benchmark = f"./{prog}_{flag}" + " " + " ".join(config)
-        result = subprocess.run(["/bin/time", "-f", "%e;%U;%S;%M"] + benchmark.split(), stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-        real_time = result.stderr.decode().strip().split(";")[0]  # Extract real time
-        timing_data.append((flag, real_time))
+        # Run cmake
+        cmake_cmd = ["cmake", "..", f"-DCMAKE_C_FLAGS_RELEASE={flag}"]
+        subprocess.run(cmake_cmd)
+        # Run make
+        subprocess.run(["make"], shell=True)
+        # Run the program
+        benchmark = f"./{prog}" + " " + " ".join(config)
+        result = subprocess.run(["/bin/time", "-f", "%e"] + benchmark.split(), stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        real_time = result.stderr.decode().strip().split("\n")
+        timing_data.append((flag, real_time[-1]))
+        print(real_time[-1])
+        subprocess.run(["make clean"], shell=True)
         os.chdir("..")
     
     # Save timing data to CSV for the current program

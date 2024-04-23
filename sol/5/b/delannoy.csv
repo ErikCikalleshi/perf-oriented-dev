@@ -1,0 +1,15 @@
+Flag,Real Time
+-ftree-partial-pre,3.35
+-floop-interchange,3.22
+-funswitch-loops,3.22
+-fipa-cp-clone,3.24
+-fgcse-after-reload,3.23
+-ftree-loop-distribution,3.23
+-floop-unroll-and-jam,3.23
+-fsplit-paths,3.22
+-fsplit-loops,3.22
+-fversion-loops-for-strides,3.22
+-fpredictive-commoning,3.22
+-fpeel-loops,3.23
+-funroll-completely-grow-size,3.22
+-O3,3.35

@@ -1,0 +1,29 @@
+Flag,Real Time
+-ftree-partial-pre,"Command terminated by signal 11
+0.26"
+-floop-interchange,"Command terminated by signal 11
+0.27"
+-funswitch-loops,"Command terminated by signal 11
+0.25"
+-fipa-cp-clone,"Command terminated by signal 11
+0.26"
+-fgcse-after-reload,"Command terminated by signal 11
+0.24"
+-ftree-loop-distribution,"Command terminated by signal 11
+0.26"
+-floop-unroll-and-jam,"Command terminated by signal 11
+0.26"
+-fsplit-paths,"Command terminated by signal 11
+0.26"
+-fsplit-loops,"Command terminated by signal 11
+0.25"
+-fversion-loops-for-strides,"Command terminated by signal 11
+0.27"
+-fpredictive-commoning,"Command terminated by signal 11
+0.18"
+-fpeel-loops,"Command terminated by signal 11
+0.17"
+-funroll-completely-grow-size,"Command terminated by signal 11
+0.18"
+-O3,"Command terminated by signal 11
+0.27"
