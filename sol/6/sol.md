@@ -51,6 +51,7 @@ opt_flag,block_size,real_time
 -O2,256,2.60
 -O3,256,2.37
 -Os,256,3.42
+-Ofast,256,2.32
 ```
 
 ![alt text](image-1.png)
