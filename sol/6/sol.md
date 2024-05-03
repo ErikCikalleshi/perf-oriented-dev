@@ -1,0 +1,6 @@
+- The outer loops (ii, jj, kk) iterate over matrix indices in steps of BLOCK_SIZE, defining the current block of focus.
+- BLOCK_SIZE is a predefined constant crucial for performance, determining the size of computation blocks.
+- Inside these loops, three more loops handle matrix multiplication for the current block.
+- Inner loops iterate over i, j, and k within the current block boundaries (ii, jj, kk) to (ii + BLOCK_SIZE, jj + BLOCK_SIZE, kk + BLOCK_SIZE).
+- The innermost loop calculates matrix multiplication by iterating over k, performing row-column dot products.
+- Resulting sums are accumulated into matrix C after each innermost loop iteration.
