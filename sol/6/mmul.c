@@ -37,7 +37,8 @@ int main(int argc, char *argv[]) {
     }
 
     int matrix_size = atoi(argv[1]);
-	double BLOCK_SIZE = atof(argv[2]) / sizeof(TYPE);
+	//since input is in KB
+	double BLOCK_SIZE = (atof(argv[2]) * 1024) / sizeof(TYPE);
 
 	// create the matrices
 	MATRIX A = createMatrix(matrix_size, matrix_size);

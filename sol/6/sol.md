@@ -63,7 +63,7 @@ opt_flag,block_size,real_time
 -Ofast,512,2.40
 ```
 
-![alt text](image-2.png)
+![alt text](image-1.png)
 
 In general the best optimization flags are the higher ones, like O2, O3, Ofast. The best block size is 64 with the -Ofast flag. Note that the status "Verification: OK" is also being considerated. It means that if it is OK than the entry will be added into the table.
 
