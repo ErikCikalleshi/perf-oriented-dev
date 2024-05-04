@@ -1,3 +1,4 @@
+## Exercise 1
 - The outer loops (ii, jj, kk) iterate over matrix indices in steps of BLOCK_SIZE, defining the current block of focus.
 - BLOCK_SIZE is a predefined constant crucial for performance, determining the size of computation blocks.
 - Inside these loops, three more loops handle matrix multiplication for the current block.
@@ -65,3 +66,15 @@ opt_flag,block_size,real_time
 ![alt text](image-2.png)
 
 In general the best optimization flags are the higher ones, like O2, O3, Ofast. The best block size is 64 with the -Ofast flag. Note that the status "Verification: OK" is also being considerated. It means that if it is OK than the entry will be added into the table.
+
+## Exercise 2
+
+Measures access time for increasing memory block sizes.
+
+1. Create a large array of characters (so it will be easier to working with KB) and fill it with random values.
+2. Start with small block sizes and increase them gradually.
+   For example, start with 1 KB, then 2 KB, 4 KB, 8 KB, and so on.
+3. Measure the time it takes to access each block size.
+4. Plot the results to visualize the relationship between block size and access time.
+
+Probably we need also to add padding into the array to avoid cache line conflicts and try to acces each block only once. Also we need to disable optimizations to avoid compiler optimizations so we can get plain memory access time.
