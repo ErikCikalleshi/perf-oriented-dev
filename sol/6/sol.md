@@ -7,7 +7,7 @@
 
 No loop tiling time ``20.95s``
 
-Results of tiling with different size of block size:
+Results of tiling with different size of block size when just using NO optimization flag:
 ```
 block_size,real_time
 16,8.42
@@ -16,6 +16,7 @@ block_size,real_time
 128,9.43
 256,9.29
 ```
+The block size should be typically inside the L1 or L2 cache size, which can reach at most 64KB for L1 and 256KB for L2, to maximize cache utilization. We can see that 256 is the best block size for this case.
 
 ![alt text](image.png)
 
@@ -55,3 +56,5 @@ opt_flag,block_size,real_time
 ```
 
 ![alt text](image-1.png)
+
+In general the best optimization flags are the higher ones, like O2, O3, Ofast. The best block size is 16 for 
