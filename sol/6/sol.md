@@ -23,38 +23,45 @@ The block size should be typically inside the L1 or L2 cache size, which can rea
 With the different optimization flags:
 ```
 opt_flag,block_size,real_time
--O0,16,8.48
--O1,16,2.58
--O2,16,2.45
--O3,16,2.09
--Os,16,2.83
--Ofast,16,2.06
--O0,32,9.44
--O1,32,3.00
--O2,32,2.80
--O3,32,2.58
--Os,32,3.60
--Ofast,32,2.57
--O0,64,9.74
--O1,64,2.85
--O2,64,2.66
--O3,64,2.42
--Os,64,3.58
--Ofast,64,2.35
--O0,128,9.09
--O1,128,2.70
--O2,128,2.55
--O3,128,2.31
--Os,128,3.53
--Ofast,128,2.37
--O0,256,9.17
--O1,256,2.59
--O2,256,2.60
--O3,256,2.37
--Os,256,3.42
--Ofast,256,2.32
+opt_flag,block_size,real_time
+-O0,16,20.97
+-O1,16,12.46
+-O2,16,11.51
+-O3,16,10.88
+-Os,16,12.08
+-Ofast,16,10.52
+-O0,32,12.01
+-O1,32,4.53
+-O2,32,3.81
+-O3,32,3.61
+-Os,32,4.08
+-Ofast,32,3.36
+-O0,64,8.90
+-O1,64,2.43
+-O2,64,2.08
+-O3,64,1.95
+-Os,64,2.46
+-Ofast,64,1.88
+-O0,128,8.45
+-O1,128,2.57
+-O2,128,2.48
+-O3,128,2.10
+-Os,128,2.81
+-Ofast,128,2.06
+-O0,256,9.36
+-O1,256,2.93
+-O2,256,2.76
+-O3,256,2.52
+-Os,256,3.49
+-Ofast,256,2.51
+-O0,512,9.68
+-O1,512,2.83
+-O2,512,2.71
+-O3,512,2.38
+-Os,512,3.68
+-Ofast,512,2.40
 ```
 
-![alt text](image-1.png)
+![alt text](image-2.png)
 
-In general the best optimization flags are the higher ones, like O2, O3, Ofast. The best block size is 16 for 
+In general the best optimization flags are the higher ones, like O2, O3, Ofast. The best block size is 64 with the -Ofast flag. Note that the status "Verification: OK" is also being considerated. It means that if it is OK than the entry will be added into the table.

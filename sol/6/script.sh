@@ -12,10 +12,10 @@
 matrix_size=2048
 
 # Define block sizes to test (in powers of 2)
-block_sizes=(16 32 64 128 256)
+block_sizes=(16 32 64 128 256 512)
 
 # Load required modules or set environment variables if needed
-# gcc -o mmul_native mmul_native.c
+# gcc -o mmul_native mmul_native.c -O3
 
 # real_time=$(/bin/time -f "%e" ./mmul_native 2048 2>&1 >/dev/null)
 
