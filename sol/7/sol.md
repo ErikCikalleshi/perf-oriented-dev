@@ -26,4 +26,4 @@ Peak Memory (KB): 1424476
 * MiMalloc shows slightly lower CPU usage than RPMalloc and no preloading.
 * RPMalloc preload has the highest peak memory usage among the tested allocators.
 
-![alt text](image-2.png)
+![alt text](image-3.png)
