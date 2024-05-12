@@ -1,22 +1,31 @@
-No Allocator Preloading
+### No Allocator Preloading
 
 Real Time (s): 79.94
+
 User CPU Time (s): 516.65
+
 System CPU Time (s): 20.35
+
 Peak Memory (KB): 1351912
 
-RPMalloc Allocator Preloading
+### RPMalloc Allocator Preloading
 
 Real Time (s): 76.27
+
 User CPU Time (s): 501.80
+
 System CPU Time (s): 21.00
+
 Peak Memory (KB): 1471296
 
-MiMalloc Allocator Preloading
+### MiMalloc Allocator Preloading
 
 Real Time (s): 75.99
+
 User CPU Time (s): 506.75
+
 System CPU Time (s): 20.52
+
 Peak Memory (KB): 1424476
 
 ![alt text](image.png)
@@ -26,4 +35,5 @@ Peak Memory (KB): 1424476
 * MiMalloc shows slightly lower CPU usage than RPMalloc and no preloading.
 * RPMalloc preload has the highest peak memory usage among the tested allocators.
 
+## Exercise 2
 ![alt text](image-3.png)
