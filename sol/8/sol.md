@@ -1,7 +1,6 @@
 ### Exercise 1
-The pull request (PR) KhronosGroup/Vulkan-ValidationLayers#5587 addresses the problem of **false sharing** in multithreaded code, which can lead to performance degradation due to unnecessary cache coherence traffic between CPU cores. False sharing occurs when threads on different cores modify variables that reside on the same cache line, causing the cache line to be invalidated and reloaded frequently.
+The pull request (PR) KhronosGroup/Vulkan-ValidationLayers#5587 addresses the problem of false sharing in multithreaded code, which can lead to performance degradation due to unnecessary cache coherence traffic between CPU cores. False sharing occurs when threads on different cores modify variables that reside on the same cache line, causing the cache line to be invalidated and reloaded frequently.
 
-#### Problem
 The issue involves variables that are shared between threads and may be updated frequently, leading to false sharing. Specifically, it looks like the code involves some shared counters or flags (ThreadSafety::thread_count) which multiple threads might access or update, potentially causing performance issues.
 
 #### Solution
