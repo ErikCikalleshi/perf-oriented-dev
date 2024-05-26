@@ -2,7 +2,8 @@ For benchmarking the timeout was set to 4 seconds for each iteration. The number
 
 2 * 4 * 4 * 3 * 4 = 384 Iterations * 4 seconds = 1536 seconds = 25.6 minutes
                   = 384 Iteartions * 5 seconds = 1920 seconds = 32 minutes >= 30 minutes
-
+# Array vs. Linked List
+![alt text](arraylist-vs-linkedlist-complexity.png)
 # Analysis
 In general we can say that locally more operations are performed with the datastructure "Array" than with the datastructure "List". 
 ## Locally
@@ -20,7 +21,7 @@ Arrays outperform linked lists when it comes to the number of operations complet
 ![Arrays vs. Linked Lists](lcc3/element_size_vs_operations_completed2.png)
 
 ### Insertion / Delete Ratio & Operations Completed
-When the ratio of insertions and deletions is 0%, indicating only read and write operations are performed, arrays outperform linked lists due to their O(1) time complexity for these operations.
+When the ratio of insertions and deletions is 0%, indicating only read and write operations are performed.
 Conversely, when the ratio is 50%, linked lists outperform arrays because linked lists have O(1) time complexity for insertion and deletion, while arrays have O(n) due to potential shifting of elements.
 ### Locally
 ![Arrays vs. Linked Lists](local/ins_del_ratio_vs_operations_completed2.png)
