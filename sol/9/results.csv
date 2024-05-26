@@ -1,0 +1,10 @@
+idx, data structure, Ins/Del Ratio,Read/Write Ratio,Element Size,Number of Elements,Operations Completed
+1,Array,0,100,8,10,2541218060
+2,Array,0,100,8,1000,3187622000
+3,Array,0,100,8,100000,3258900000
+4,Array,0,100,8,10000000,3200000000
+5,Array,0,100,512,10,3428218590
+6,Array,0,100,512,1000,3244565000
+7,Array,0,100,512,100000,3218700000
+8,Array,0,100,512,10000000,3140000000
+9,Array,0,100,8192,10,

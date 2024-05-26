@@ -1,0 +1,775 @@
+Operations completed: 1658152000
+Operations completed: 1828285000
+Operations completed: 1805611000
+Operations completed: 1830755000
+Operations completed: 1842605000
+Operations completed: 1815414000
+Operations completed: 1835881000
+Running Test 1: Array 0 100 8 10
+Operations completed: 1768957000
+Running Test 2: Array 0 100 8 1000
+Operations completed: 1825846000
+Running Test 3: Array 0 100 8 100000
+Operations completed: 1829359000
+Running Test 4: Array 0 100 8 10000000
+Operations completed: 1829478000
+Running Test 5: Array 0 100 512 10
+Operations completed: 1820477000
+Running Test 6: Array 0 100 512 1000
+Operations completed: 1825888000
+Running Test 7: Array 0 100 512 100000
+Operations completed: 1833986000
+Running Test 8: Array 0 100 512 10000000
+Operations completed: 1829810000
+Running Test 9: Array 0 100 8192 10
+Operations completed: 1829646000
+Running Test 10: Array 0 100 8192 1000
+Operations completed: 1805719000
+Running Test 11: Array 0 100 8192 100000
+Operations completed: 1815270000
+Running Test 12: Array 0 100 8192 10000000
+Operations completed: 1810911000
+Running Test 13: Array 0 99 8 10
+Operations completed: 1826283000
+Running Test 14: Array 0 99 8 1000
+Operations completed: 1819211000
+Running Test 15: Array 0 99 8 100000
+Operations completed: 1822560000
+Running Test 16: Array 0 99 8 10000000
+Operations completed: 1818940000
+Running Test 17: Array 0 99 512 10
+Operations completed: 1818590000
+Running Test 18: Array 0 99 512 1000
+Operations completed: 1817467000
+Running Test 19: Array 0 99 512 100000
+Operations completed: 1827700000
+Running Test 20: Array 0 99 512 10000000
+Operations completed: 1830304000
+Running Test 21: Array 0 99 8192 10
+Operations completed: 1828681000
+Running Test 22: Array 0 99 8192 1000
+Operations completed: 1831958000
+Running Test 23: Array 0 99 8192 100000
+Operations completed: 1830978000
+Running Test 24: Array 0 99 8192 10000000
+Operations completed: 1821615000
+Running Test 25: Array 0 90 8 10
+Operations completed: 1830206000
+Running Test 26: Array 0 90 8 1000
+Operations completed: 1810882000
+Running Test 27: Array 0 90 8 100000
+Operations completed: 1819476000
+Running Test 28: Array 0 90 8 10000000
+Operations completed: 1824014000
+Running Test 29: Array 0 90 512 10
+Operations completed: 1810246000
+Running Test 30: Array 0 90 512 1000
+Operations completed: 1805097000
+Running Test 31: Array 0 90 512 100000
+Operations completed: 1818356000
+Running Test 32: Array 0 90 512 10000000
+Operations completed: 1823841000
+Running Test 33: Array 0 90 8192 10
+Operations completed: 1808429000
+Running Test 34: Array 0 90 8192 1000
+Operations completed: 1819736000
+Running Test 35: Array 0 90 8192 100000
+Operations completed: 1835428000
+Running Test 36: Array 0 90 8192 10000000
+Operations completed: 1837520000
+Running Test 37: Array 0 50 8 10
+Operations completed: 1846342000
+Running Test 38: Array 0 50 8 1000
+Operations completed: 1840552000
+Running Test 39: Array 0 50 8 100000
+Operations completed: 1841138000
+Running Test 40: Array 0 50 8 10000000
+Operations completed: 1825728000
+Running Test 41: Array 0 50 512 10
+Operations completed: 1825391000
+Running Test 42: Array 0 50 512 1000
+Operations completed: 1825316000
+Running Test 43: Array 0 50 512 100000
+Operations completed: 1828553000
+Running Test 44: Array 0 50 512 10000000
+Operations completed: 1827566000
+Running Test 45: Array 0 50 8192 10
+Operations completed: 1828637000
+Running Test 46: Array 0 50 8192 1000
+Operations completed: 1820261000
+Running Test 47: Array 0 50 8192 100000
+Operations completed: 1817815000
+Running Test 48: Array 0 50 8192 10000000
+Operations completed: 1820574000
+Running Test 49: Array 1 100 8 10
+Operations completed: 1834401000
+Running Test 50: Array 1 100 8 1000
+Operations completed: 1828028000
+Running Test 51: Array 1 100 8 100000
+Operations completed: 1834339000
+Running Test 52: Array 1 100 8 10000000
+Operations completed: 1819645000
+Running Test 53: Array 1 100 512 10
+Operations completed: 1813845000
+Running Test 54: Array 1 100 512 1000
+Operations completed: 1815582000
+Running Test 55: Array 1 100 512 100000
+Operations completed: 1828315000
+Running Test 56: Array 1 100 512 10000000
+Operations completed: 1821118000
+Running Test 57: Array 1 100 8192 10
+Operations completed: 1810222000
+Running Test 58: Array 1 100 8192 1000
+Operations completed: 1812755000
+Running Test 59: Array 1 100 8192 100000
+Operations completed: 1826336000
+Running Test 60: Array 1 100 8192 10000000
+Operations completed: 1830683000
+Running Test 61: Array 1 99 8 10
+Operations completed: 1839271000
+Running Test 62: Array 1 99 8 1000
+Operations completed: 1851332000
+Running Test 63: Array 1 99 8 100000
+Operations completed: 1850123000
+Running Test 64: Array 1 99 8 10000000
+Operations completed: 1845525000
+Running Test 65: Array 1 99 512 10
+Operations completed: 1838874000
+Running Test 66: Array 1 99 512 1000
+Operations completed: 1851919000
+Running Test 67: Array 1 99 512 100000
+Operations completed: 1845698000
+Running Test 68: Array 1 99 512 10000000
+Operations completed: 1840581000
+Running Test 69: Array 1 99 8192 10
+Operations completed: 1854911000
+Running Test 70: Array 1 99 8192 1000
+Operations completed: 1850793000
+Running Test 71: Array 1 99 8192 100000
+Operations completed: 1851900000
+Running Test 72: Array 1 99 8192 10000000
+Operations completed: 1851579000
+Running Test 73: Array 1 90 8 10
+Operations completed: 1872385000
+Running Test 74: Array 1 90 8 1000
+Operations completed: 1876029000
+Running Test 75: Array 1 90 8 100000
+Operations completed: 1865528000
+Running Test 76: Array 1 90 8 10000000
+Operations completed: 1843281000
+Running Test 77: Array 1 90 512 10
+Operations completed: 1847850000
+Running Test 78: Array 1 90 512 1000
+Operations completed: 1852485000
+Running Test 79: Array 1 90 512 100000
+Operations completed: 1852394000
+Running Test 80: Array 1 90 512 10000000
+Operations completed: 1861810000
+Running Test 81: Array 1 90 8192 10
+Operations completed: 1859635000
+Running Test 82: Array 1 90 8192 1000
+Operations completed: 1851995000
+Running Test 83: Array 1 90 8192 100000
+Operations completed: 1858574000
+Running Test 84: Array 1 90 8192 10000000
+Operations completed: 1852272000
+Running Test 85: Array 1 50 8 10
+Operations completed: 1851796000
+Running Test 86: Array 1 50 8 1000
+Operations completed: 1850813000
+Running Test 87: Array 1 50 8 100000
+Operations completed: 1855915000
+Running Test 88: Array 1 50 8 10000000
+Operations completed: 1852624000
+Running Test 89: Array 1 50 512 10
+Operations completed: 1858254000
+Running Test 90: Array 1 50 512 1000
+Operations completed: 1838054000
+Running Test 91: Array 1 50 512 100000
+Operations completed: 1840045000
+Running Test 92: Array 1 50 512 10000000
+Operations completed: 1867132000
+Running Test 93: Array 1 50 8192 10
+Operations completed: 1860703000
+Running Test 94: Array 1 50 8192 1000
+Operations completed: 1848852000
+Running Test 95: Array 1 50 8192 100000
+Operations completed: 1849232000
+Running Test 96: Array 1 50 8192 10000000
+Operations completed: 1845957000
+Running Test 97: Array 10 100 8 10
+Operations completed: 1850888000
+Running Test 98: Array 10 100 8 1000
+Operations completed: 1856654000
+Running Test 99: Array 10 100 8 100000
+Operations completed: 1851092000
+Running Test 100: Array 10 100 8 10000000
+Operations completed: 1862210000
+Running Test 101: Array 10 100 512 10
+Operations completed: 1858391000
+Running Test 102: Array 10 100 512 1000
+Operations completed: 1843107000
+Running Test 103: Array 10 100 512 100000
+Operations completed: 1863798000
+Running Test 104: Array 10 100 512 10000000
+Operations completed: 1856910000
+Running Test 105: Array 10 100 8192 10
+Operations completed: 1851002000
+Running Test 106: Array 10 100 8192 1000
+Operations completed: 1860125000
+Running Test 107: Array 10 100 8192 100000
+Operations completed: 1856769000
+Running Test 108: Array 10 100 8192 10000000
+Operations completed: 1860274000
+Running Test 109: Array 10 99 8 10
+Operations completed: 1854334000
+Running Test 110: Array 10 99 8 1000
+Operations completed: 1860109000
+Running Test 111: Array 10 99 8 100000
+Operations completed: 1860125000
+Running Test 112: Array 10 99 8 10000000
+Operations completed: 1850045000
+Running Test 113: Array 10 99 512 10
+Operations completed: 1856927000
+Running Test 114: Array 10 99 512 1000
+Operations completed: 1847096000
+Running Test 115: Array 10 99 512 100000
+Operations completed: 1857506000
+Running Test 116: Array 10 99 512 10000000
+Operations completed: 1857664000
+Running Test 117: Array 10 99 8192 10
+Operations completed: 1842324000
+Running Test 118: Array 10 99 8192 1000
+Operations completed: 1854749000
+Running Test 119: Array 10 99 8192 100000
+Operations completed: 1858592000
+Running Test 120: Array 10 99 8192 10000000
+Operations completed: 1850130000
+Running Test 121: Array 10 90 8 10
+Operations completed: 1859233000
+Running Test 122: Array 10 90 8 1000
+Operations completed: 1860200000
+Running Test 123: Array 10 90 8 100000
+Operations completed: 1859880000
+Running Test 124: Array 10 90 8 10000000
+Operations completed: 1858126000
+Running Test 125: Array 10 90 512 10
+Operations completed: 1845320000
+Running Test 126: Array 10 90 512 1000
+Operations completed: 1855557000
+Running Test 127: Array 10 90 512 100000
+Operations completed: 1849481000
+Running Test 128: Array 10 90 512 10000000
+Operations completed: 1851750000
+Running Test 129: Array 10 90 8192 10
+Operations completed: 1858910000
+Running Test 130: Array 10 90 8192 1000
+Operations completed: 1867311000
+Running Test 131: Array 10 90 8192 100000
+Operations completed: 1850627000
+Running Test 132: Array 10 90 8192 10000000
+Operations completed: 1852082000
+Running Test 133: Array 10 50 8 10
+Operations completed: 1852579000
+Running Test 134: Array 10 50 8 1000
+Operations completed: 1852539000
+Running Test 135: Array 10 50 8 100000
+Operations completed: 1849278000
+Running Test 136: Array 10 50 8 10000000
+Operations completed: 1853561000
+Running Test 137: Array 10 50 512 10
+Operations completed: 1840873000
+Running Test 138: Array 10 50 512 1000
+Operations completed: 1852624000
+Running Test 139: Array 10 50 512 100000
+Operations completed: 1853878000
+Running Test 140: Array 10 50 512 10000000
+Operations completed: 1861819000
+Running Test 141: Array 10 50 8192 10
+Operations completed: 1858704000
+Running Test 142: Array 10 50 8192 1000
+Operations completed: 1858215000
+Running Test 143: Array 10 50 8192 100000
+Operations completed: 1864333000
+Running Test 144: Array 10 50 8192 10000000
+Operations completed: 1866782000
+Running Test 145: Array 50 100 8 10
+Operations completed: 1864175000
+Running Test 146: Array 50 100 8 1000
+Operations completed: 1870893000
+Running Test 147: Array 50 100 8 100000
+Operations completed: 1864565000
+Running Test 148: Array 50 100 8 10000000
+Operations completed: 1848915000
+Running Test 149: Array 50 100 512 10
+Operations completed: 1853858000
+Running Test 150: Array 50 100 512 1000
+Operations completed: 1854547000
+Running Test 151: Array 50 100 512 100000
+Operations completed: 1846176000
+Running Test 152: Array 50 100 512 10000000
+Operations completed: 1863642000
+Running Test 153: Array 50 100 8192 10
+Operations completed: 1864327000
+Running Test 154: Array 50 100 8192 1000
+Operations completed: 1861371000
+Running Test 155: Array 50 100 8192 100000
+Operations completed: 1858892000
+Running Test 156: Array 50 100 8192 10000000
+Operations completed: 1843532000
+Running Test 157: Array 50 99 8 10
+Operations completed: 1838131000
+Running Test 158: Array 50 99 8 1000
+Operations completed: 1842566000
+Running Test 159: Array 50 99 8 100000
+Operations completed: 1847298000
+Running Test 160: Array 50 99 8 10000000
+Operations completed: 1856034000
+Running Test 161: Array 50 99 512 10
+Operations completed: 1832985000
+Running Test 162: Array 50 99 512 1000
+Operations completed: 1863104000
+Running Test 163: Array 50 99 512 100000
+Operations completed: 1861794000
+Running Test 164: Array 50 99 512 10000000
+Operations completed: 1868410000
+Running Test 165: Array 50 99 8192 10
+Operations completed: 1858557000
+Running Test 166: Array 50 99 8192 1000
+Operations completed: 1866252000
+Running Test 167: Array 50 99 8192 100000
+Operations completed: 1867731000
+Running Test 168: Array 50 99 8192 10000000
+Operations completed: 1866238000
+Running Test 169: Array 50 90 8 10
+Operations completed: 1867967000
+Running Test 170: Array 50 90 8 1000
+Operations completed: 1864641000
+Running Test 171: Array 50 90 8 100000
+Operations completed: 1866882000
+Running Test 172: Array 50 90 8 10000000
+Operations completed: 1845146000
+Running Test 173: Array 50 90 512 10
+Operations completed: 1837896000
+Running Test 174: Array 50 90 512 1000
+Operations completed: 1853571000
+Running Test 175: Array 50 90 512 100000
+Operations completed: 1858483000
+Running Test 176: Array 50 90 512 10000000
+Operations completed: 1856039000
+Running Test 177: Array 50 90 8192 10
+Operations completed: 1863454000
+Running Test 178: Array 50 90 8192 1000
+Operations completed: 1855368000
+Running Test 179: Array 50 90 8192 100000
+Operations completed: 1851648000
+Running Test 180: Array 50 90 8192 10000000
+Operations completed: 1858332000
+Running Test 181: Array 50 50 8 10
+Operations completed: 1853589000
+Running Test 182: Array 50 50 8 1000
+Operations completed: 1861510000
+Running Test 183: Array 50 50 8 100000
+Operations completed: 1862638000
+Running Test 184: Array 50 50 8 10000000
+Operations completed: 1843345000
+Running Test 185: Array 50 50 512 10
+Operations completed: 1851208000
+Running Test 186: Array 50 50 512 1000
+Operations completed: 1846003000
+Running Test 187: Array 50 50 512 100000
+Operations completed: 1838712000
+Running Test 188: Array 50 50 512 10000000
+Operations completed: 1851988000
+Running Test 189: Array 50 50 8192 10
+Operations completed: 1854540000
+Running Test 190: Array 50 50 8192 1000
+Operations completed: 1853858000
+Running Test 191: Array 50 50 8192 100000
+Operations completed: 1855724000
+Running Test 192: Array 50 50 8192 10000000
+Operations completed: 1855803000
+Running Test 193: LinkedList 0 100 8 10
+Operations completed: 16386000
+Running Test 194: LinkedList 0 100 8 1000
+Operations completed: 16371000
+Running Test 195: LinkedList 0 100 8 100000
+Operations completed: 16400000
+Running Test 196: LinkedList 0 100 8 10000000
+Operations completed: 16300000
+Running Test 197: LinkedList 0 100 512 10
+Operations completed: 16305000
+Running Test 198: LinkedList 0 100 512 1000
+Operations completed: 16324000
+Running Test 199: LinkedList 0 100 512 100000
+Operations completed: 16362000
+Running Test 200: LinkedList 0 100 512 10000000
+Operations completed: 16327000
+Running Test 201: LinkedList 0 100 8192 10
+Operations completed: 16426000
+Running Test 202: LinkedList 0 100 8192 1000
+Operations completed: 16457000
+Running Test 203: LinkedList 0 100 8192 100000
+Operations completed: 16389000
+Running Test 204: LinkedList 0 100 8192 10000000
+Operations completed: 16337000
+Running Test 205: LinkedList 0 99 8 10
+Operations completed: 16414000
+Running Test 206: LinkedList 0 99 8 1000
+Operations completed: 16420000
+Running Test 207: LinkedList 0 99 8 100000
+Operations completed: 16429000
+Running Test 208: LinkedList 0 99 8 10000000
+Operations completed: 16405000
+Running Test 209: LinkedList 0 99 512 10
+Operations completed: 16410000
+Running Test 210: LinkedList 0 99 512 1000
+Operations completed: 16408000
+Running Test 211: LinkedList 0 99 512 100000
+Operations completed: 16441000
+Running Test 212: LinkedList 0 99 512 10000000
+Operations completed: 16395000
+Running Test 213: LinkedList 0 99 8192 10
+Operations completed: 16475000
+Running Test 214: LinkedList 0 99 8192 1000
+Operations completed: 16412000
+Running Test 215: LinkedList 0 99 8192 100000
+Operations completed: 16446000
+Running Test 216: LinkedList 0 99 8192 10000000
+Operations completed: 16463000
+Running Test 217: LinkedList 0 90 8 10
+Operations completed: 16507000
+Running Test 218: LinkedList 0 90 8 1000
+Operations completed: 16320000
+Running Test 219: LinkedList 0 90 8 100000
+Operations completed: 16391000
+Running Test 220: LinkedList 0 90 8 10000000
+Operations completed: 16304000
+Running Test 221: LinkedList 0 90 512 10
+Operations completed: 16356000
+Running Test 222: LinkedList 0 90 512 1000
+Operations completed: 15983000
+Running Test 223: LinkedList 0 90 512 100000
+Operations completed: 16132000
+Running Test 224: LinkedList 0 90 512 10000000
+Operations completed: 16386000
+Running Test 225: LinkedList 0 90 8192 10
+Operations completed: 16393000
+Running Test 226: LinkedList 0 90 8192 1000
+Operations completed: 16340000
+Running Test 227: LinkedList 0 90 8192 100000
+Operations completed: 16316000
+Running Test 228: LinkedList 0 90 8192 10000000
+Operations completed: 16367000
+Running Test 229: LinkedList 0 50 8 10
+Operations completed: 16341000
+Running Test 230: LinkedList 0 50 8 1000
+Operations completed: 16382000
+Running Test 231: LinkedList 0 50 8 100000
+Operations completed: 16422000
+Running Test 232: LinkedList 0 50 8 10000000
+Operations completed: 16315000
+Running Test 233: LinkedList 0 50 512 10
+Operations completed: 16475000
+Running Test 234: LinkedList 0 50 512 1000
+Operations completed: 16486000
+Running Test 235: LinkedList 0 50 512 100000
+Operations completed: 16377000
+Running Test 236: LinkedList 0 50 512 10000000
+Operations completed: 16389000
+Running Test 237: LinkedList 0 50 8192 10
+Operations completed: 16402000
+Running Test 238: LinkedList 0 50 8192 1000
+Operations completed: 16380000
+Running Test 239: LinkedList 0 50 8192 100000
+Operations completed: 16370000
+Running Test 240: LinkedList 0 50 8192 10000000
+Operations completed: 16382000
+Running Test 241: LinkedList 1 100 8 10
+Operations completed: 16454000
+Running Test 242: LinkedList 1 100 8 1000
+Operations completed: 16474000
+Running Test 243: LinkedList 1 100 8 100000
+Operations completed: 16355000
+Running Test 244: LinkedList 1 100 8 10000000
+Operations completed: 16398000
+Running Test 245: LinkedList 1 100 512 10
+Operations completed: 16428000
+Running Test 246: LinkedList 1 100 512 1000
+Operations completed: 16430000
+Running Test 247: LinkedList 1 100 512 100000
+Operations completed: 16471000
+Running Test 248: LinkedList 1 100 512 10000000
+Operations completed: 16506000
+Running Test 249: LinkedList 1 100 8192 10
+Operations completed: 16369000
+Running Test 250: LinkedList 1 100 8192 1000
+Operations completed: 16457000
+Running Test 251: LinkedList 1 100 8192 100000
+Operations completed: 16461000
+Running Test 252: LinkedList 1 100 8192 10000000
+Operations completed: 16433000
+Running Test 253: LinkedList 1 99 8 10
+Operations completed: 16386000
+Running Test 254: LinkedList 1 99 8 1000
+Operations completed: 16499000
+Running Test 255: LinkedList 1 99 8 100000
+Operations completed: 16473000
+Running Test 256: LinkedList 1 99 8 10000000
+Operations completed: 16372000
+Running Test 257: LinkedList 1 99 512 10
+Operations completed: 16344000
+Running Test 258: LinkedList 1 99 512 1000
+Operations completed: 16346000
+Running Test 259: LinkedList 1 99 512 100000
+Operations completed: 16250000
+Running Test 260: LinkedList 1 99 512 10000000
+Operations completed: 16363000
+Running Test 261: LinkedList 1 99 8192 10
+Operations completed: 16392000
+Running Test 262: LinkedList 1 99 8192 1000
+Operations completed: 16387000
+Running Test 263: LinkedList 1 99 8192 100000
+Operations completed: 16411000
+Running Test 264: LinkedList 1 99 8192 10000000
+Operations completed: 16403000
+Running Test 265: LinkedList 1 90 8 10
+Operations completed: 16413000
+Running Test 266: LinkedList 1 90 8 1000
+Operations completed: 16415000
+Running Test 267: LinkedList 1 90 8 100000
+Operations completed: 16376000
+Running Test 268: LinkedList 1 90 8 10000000
+Operations completed: 16400000
+Running Test 269: LinkedList 1 90 512 10
+Operations completed: 16293000
+Running Test 270: LinkedList 1 90 512 1000
+Operations completed: 16399000
+Running Test 271: LinkedList 1 90 512 100000
+Operations completed: 16429000
+Running Test 272: LinkedList 1 90 512 10000000
+Operations completed: 16458000
+Running Test 273: LinkedList 1 90 8192 10
+Operations completed: 16376000
+Running Test 274: LinkedList 1 90 8192 1000
+Operations completed: 16498000
+Running Test 275: LinkedList 1 90 8192 100000
+Operations completed: 16634000
+Running Test 276: LinkedList 1 90 8192 10000000
+Operations completed: 16505000
+Running Test 277: LinkedList 1 50 8 10
+Operations completed: 16634000
+Running Test 278: LinkedList 1 50 8 1000
+Operations completed: 16656000
+Running Test 279: LinkedList 1 50 8 100000
+Operations completed: 16640000
+Running Test 280: LinkedList 1 50 8 10000000
+Operations completed: 16625000
+Running Test 281: LinkedList 1 50 512 10
+Operations completed: 16647000
+Running Test 282: LinkedList 1 50 512 1000
+Operations completed: 16533000
+Running Test 283: LinkedList 1 50 512 100000
+Operations completed: 16512000
+Running Test 284: LinkedList 1 50 512 10000000
+Operations completed: 16599000
+Running Test 285: LinkedList 1 50 8192 10
+Operations completed: 16550000
+Running Test 286: LinkedList 1 50 8192 1000
+Operations completed: 16518000
+Running Test 287: LinkedList 1 50 8192 100000
+Operations completed: 16641000
+Running Test 288: LinkedList 1 50 8192 10000000
+Operations completed: 16631000
+Running Test 289: LinkedList 10 100 8 10
+Operations completed: 16634000
+Running Test 290: LinkedList 10 100 8 1000
+Operations completed: 16622000
+Running Test 291: LinkedList 10 100 8 100000
+Operations completed: 16604000
+Running Test 292: LinkedList 10 100 8 10000000
+Operations completed: 16514000
+Running Test 293: LinkedList 10 100 512 10
+Operations completed: 16539000
+Running Test 294: LinkedList 10 100 512 1000
+Operations completed: 16526000
+Running Test 295: LinkedList 10 100 512 100000
+Operations completed: 16506000
+Running Test 296: LinkedList 10 100 512 10000000
+Operations completed: 16534000
+Running Test 297: LinkedList 10 100 8192 10
+Operations completed: 16535000
+Running Test 298: LinkedList 10 100 8192 1000
+Operations completed: 16478000
+Running Test 299: LinkedList 10 100 8192 100000
+Operations completed: 16554000
+Running Test 300: LinkedList 10 100 8192 10000000
+Operations completed: 16558000
+Running Test 301: LinkedList 10 99 8 10
+Operations completed: 16557000
+Running Test 302: LinkedList 10 99 8 1000
+Operations completed: 16562000
+Running Test 303: LinkedList 10 99 8 100000
+Operations completed: 16512000
+Running Test 304: LinkedList 10 99 8 10000000
+Operations completed: 16523000
+Running Test 305: LinkedList 10 99 512 10
+Operations completed: 16635000
+Running Test 306: LinkedList 10 99 512 1000
+Operations completed: 16621000
+Running Test 307: LinkedList 10 99 512 100000
+Operations completed: 16597000
+Running Test 308: LinkedList 10 99 512 10000000
+Operations completed: 16623000
+Running Test 309: LinkedList 10 99 8192 10
+Operations completed: 16549000
+Running Test 310: LinkedList 10 99 8192 1000
+Operations completed: 16512000
+Running Test 311: LinkedList 10 99 8192 100000
+Operations completed: 16473000
+Running Test 312: LinkedList 10 99 8192 10000000
+Operations completed: 16583000
+Running Test 313: LinkedList 10 90 8 10
+Operations completed: 16488000
+Running Test 314: LinkedList 10 90 8 1000
+Operations completed: 16633000
+Running Test 315: LinkedList 10 90 8 100000
+Operations completed: 16655000
+Running Test 316: LinkedList 10 90 8 10000000
+Operations completed: 16612000
+Running Test 317: LinkedList 10 90 512 10
+Operations completed: 16622000
+Running Test 318: LinkedList 10 90 512 1000
+Operations completed: 16563000
+Running Test 319: LinkedList 10 90 512 100000
+Operations completed: 16649000
+Running Test 320: LinkedList 10 90 512 10000000
+Operations completed: 16554000
+Running Test 321: LinkedList 10 90 8192 10
+Operations completed: 16628000
+Running Test 322: LinkedList 10 90 8192 1000
+Operations completed: 16397000
+Running Test 323: LinkedList 10 90 8192 100000
+Operations completed: 16468000
+Running Test 324: LinkedList 10 90 8192 10000000
+Operations completed: 16621000
+Running Test 325: LinkedList 10 50 8 10
+Operations completed: 16639000
+Running Test 326: LinkedList 10 50 8 1000
+Operations completed: 16587000
+Running Test 327: LinkedList 10 50 8 100000
+Operations completed: 16505000
+Running Test 328: LinkedList 10 50 8 10000000
+Operations completed: 16521000
+Running Test 329: LinkedList 10 50 512 10
+Operations completed: 16479000
+Running Test 330: LinkedList 10 50 512 1000
+Operations completed: 16332000
+Running Test 331: LinkedList 10 50 512 100000
+Operations completed: 16534000
+Running Test 332: LinkedList 10 50 512 10000000
+Operations completed: 16473000
+Running Test 333: LinkedList 10 50 8192 10
+Operations completed: 16475000
+Running Test 334: LinkedList 10 50 8192 1000
+Operations completed: 16487000
+Running Test 335: LinkedList 10 50 8192 100000
+Operations completed: 16546000
+Running Test 336: LinkedList 10 50 8192 10000000
+Operations completed: 16551000
+Running Test 337: LinkedList 50 100 8 10
+Operations completed: 16550000
+Running Test 338: LinkedList 50 100 8 1000
+Operations completed: 16546000
+Running Test 339: LinkedList 50 100 8 100000
+Operations completed: 16500000
+Running Test 340: LinkedList 50 100 8 10000000
+Operations completed: 16563000
+Running Test 341: LinkedList 50 100 512 10
+Operations completed: 16608000
+Running Test 342: LinkedList 50 100 512 1000
+Operations completed: 16527000
+Running Test 343: LinkedList 50 100 512 100000
+Operations completed: 16499000
+Running Test 344: LinkedList 50 100 512 10000000
+Operations completed: 16604000
+Running Test 345: LinkedList 50 100 8192 10
+Operations completed: 16510000
+Running Test 346: LinkedList 50 100 8192 1000
+Operations completed: 16562000
+Running Test 347: LinkedList 50 100 8192 100000
+Operations completed: 16524000
+Running Test 348: LinkedList 50 100 8192 10000000
+Operations completed: 16536000
+Running Test 349: LinkedList 50 99 8 10
+Operations completed: 16522000
+Running Test 350: LinkedList 50 99 8 1000
+Operations completed: 16568000
+Running Test 351: LinkedList 50 99 8 100000
+Operations completed: 16620000
+Running Test 352: LinkedList 50 99 8 10000000
+Operations completed: 16588000
+Running Test 353: LinkedList 50 99 512 10
+Operations completed: 16526000
+Running Test 354: LinkedList 50 99 512 1000
+Operations completed: 16617000
+Running Test 355: LinkedList 50 99 512 100000
+Operations completed: 16417000
+Running Test 356: LinkedList 50 99 512 10000000
+Operations completed: 16379000
+Running Test 357: LinkedList 50 99 8192 10
+Operations completed: 16626000
+Running Test 358: LinkedList 50 99 8192 1000
+Operations completed: 16508000
+Running Test 359: LinkedList 50 99 8192 100000
+Operations completed: 16604000
+Running Test 360: LinkedList 50 99 8192 10000000
+Operations completed: 16639000
+Running Test 361: LinkedList 50 90 8 10
+Operations completed: 16599000
+Running Test 362: LinkedList 50 90 8 1000
+Operations completed: 16649000
+Running Test 363: LinkedList 50 90 8 100000
+Operations completed: 16554000
+Running Test 364: LinkedList 50 90 8 10000000
+Operations completed: 16350000
+Running Test 365: LinkedList 50 90 512 10
+Operations completed: 16442000
+Running Test 366: LinkedList 50 90 512 1000
+Operations completed: 16534000
+Running Test 367: LinkedList 50 90 512 100000
+Operations completed: 16531000
+Running Test 368: LinkedList 50 90 512 10000000
+Operations completed: 16533000
+Running Test 369: LinkedList 50 90 8192 10
+Operations completed: 16533000
+Running Test 370: LinkedList 50 90 8192 1000
+Operations completed: 16559000
+Running Test 371: LinkedList 50 90 8192 100000
+Operations completed: 16477000
+Running Test 372: LinkedList 50 90 8192 10000000
+Operations completed: 16545000
+Running Test 373: LinkedList 50 50 8 10
+Operations completed: 16490000
+Running Test 374: LinkedList 50 50 8 1000
+Operations completed: 16492000
+Running Test 375: LinkedList 50 50 8 100000
+Operations completed: 16485000
+Running Test 376: LinkedList 50 50 8 10000000
+Operations completed: 16602000
+Running Test 377: LinkedList 50 50 512 10
+Operations completed: 16610000
+Running Test 378: LinkedList 50 50 512 1000
+Operations completed: 16608000
+Running Test 379: LinkedList 50 50 512 100000
+Operations completed: 16654000
+Running Test 380: LinkedList 50 50 512 10000000
+Operations completed: 16462000
+Running Test 381: LinkedList 50 50 8192 10
+Operations completed: 16435000
+Running Test 382: LinkedList 50 50 8192 1000
+Operations completed: 16577000
+Running Test 383: LinkedList 50 50 8192 100000
+Operations completed: 16578000
+Running Test 384: LinkedList 50 50 8192 10000000
+Operations completed: 16567000
