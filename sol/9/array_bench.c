@@ -37,8 +37,15 @@ void benchmark(int ins_del_ratio, int read_write_ratio, int element_size, int nu
         array[i] = i;
     }
 
-    while (time(NULL) - start < TIME_LIMIT) {
+    while (1) {
         for (int i = 0; i < num_elements; i++) {
+            if (time(NULL) - start >= TIME_LIMIT) {
+                time_t end = time(NULL);
+                printf("%lld,", operations);
+                printf("%ld\n", end - start);
+                free(array); // free the dynamically allocated memory
+                return;
+            }
             if (i % read_write_ratio == 0) {
                 read(i, array);
                 write(i, i, array);
@@ -50,8 +57,9 @@ void benchmark(int ins_del_ratio, int read_write_ratio, int element_size, int nu
             operations++;
         }
     }
-
-    printf("%lld\n", operations);
+    time_t end = time(NULL);
+    printf("%lld,", operations);
+    printf("%ld\n", end - start);
     free(array); // free the dynamically allocated memory
 }
 

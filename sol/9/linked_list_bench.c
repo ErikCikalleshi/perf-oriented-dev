@@ -64,8 +64,14 @@ void deletion(int index) {
 void benchmark(int ins_del_ratio, int read_write_ratio, int element_size, int num_elements) {
     long long int operations = 0;
     time_t start = time(NULL);
-    while (time(NULL) - start < TIME_LIMIT) {
+    while (1) {
         for (int i = 0; i < num_elements; i++) {
+            if (time(NULL) - start >= TIME_LIMIT) {
+                time_t end = time(NULL);
+                printf("%lld,", operations);
+                printf("%ld seconds\n", end - start);
+                return;
+            }
             if (i % read_write_ratio == 0) {
                 read(i % element_size);
                 write(i % element_size, i);
@@ -77,7 +83,9 @@ void benchmark(int ins_del_ratio, int read_write_ratio, int element_size, int nu
             operations++;
         }
     }
-    printf("%lld\n", operations);
+    time_t end = time(NULL);
+    printf("%lld,", operations);
+    printf("%ld seconds\n", end - start);
 }
 
 int main(int argc, char *argv[]) {
