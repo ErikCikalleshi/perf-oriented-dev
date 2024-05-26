@@ -1,4 +1,4 @@
-idx, data structure, Ins/Del Ratio,Read/Write Ratio,Element Size,Number of Elements,Operations Completed, Time[Seconds]
+idx,data structure,Ins/Del Ratio,Read/Write Ratio,Element Size,Number of Elements,Operations Completed, Time[Seconds]
 1,Array,0,100,8,10,664928515,4
 2,Array,0,100,8,1000,743102354,4
 3,Array,0,100,8,100000,742362202,4
