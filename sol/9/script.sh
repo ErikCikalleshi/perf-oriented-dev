@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Delete the existing CSV file
-rm -f results_local.csv
+rm -f results.csv
 
 # Define the parameters for the benchmark
 data_structures=("Array" "LinkedList")
@@ -17,7 +17,7 @@ gcc -O3 -o LinkedList linked_list_bench.c
 test_sequence=1
 
 # Write the header for the CSV file
-echo "idx, data structure, Ins/Del Ratio,Read/Write Ratio,Element Size,Number of Elements,Operations Completed, Time[Seconds]" >> results_local.csv
+echo "idx, data structure, Ins/Del Ratio,Read/Write Ratio,Element Size,Number of Elements,Operations Completed, Time[Seconds]" >> results.csv
 
 # Loop over each combination of parameters 1,100,8,10000000,
 for ds in ${data_structures[@]}; do
@@ -28,8 +28,8 @@ for ds in ${data_structures[@]}; do
                     # Print the arguments
                     echo "Arguments: $ds $idr $rwr $es $ne"
                     # Run the benchmark and save the output to a file
-                    echo -n "$test_sequence,$ds,$idr,$rwr,$es,$ne," >> results_local.csv
-                    ./$ds $idr $rwr $es $ne >> results_local.csv
+                    echo -n "$test_sequence,$ds,$idr,$rwr,$es,$ne," >> results.csv
+                    ./$ds $idr $rwr $es $ne >> results.csv
                     ((test_sequence++))
                 done
             done
