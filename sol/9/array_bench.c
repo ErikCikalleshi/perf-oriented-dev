@@ -6,24 +6,26 @@
 
 volatile int read_value;
 
-void read(int index, int* array) {
-    read_value = array[index];
+void read(int index, void* array, int element_size) {
+    void* element = malloc(element_size);
+    memcpy(element, (char*)array + index * element_size, element_size);
+    free(element);
 }
 
-void write(int index, int value, int* array) {
-    array[index] = value + read_value;
+void write(int index, int value, void* array, int element_size) {
+    memcpy((char*)array + index * element_size, &value, element_size);
 }
 
-void insertion(int index, int value, int* array, int size) {
+void insertion(int index, int value, void* array, int size, int element_size) {
     for (int i = size - 1; i > index; i--) {
-        array[i] = array[i - 1];
+        memcpy((char*)array + i * element_size, (char*)array + (i - 1) * element_size, element_size);
     }
-    array[index] = value;
+    memcpy((char*)array + index * element_size, &value, element_size);
 }
 
-void deletion(int index, int* array, int size) {
+void deletion(int index, void* array, int size, int element_size) {
     for (int i = index; i < size - 1; i++) {
-        array[i] = array[i + 1];
+        memcpy((char*)array + i * element_size, (char*)array + (i + 1) * element_size, element_size);
     }
 }
 
@@ -31,11 +33,7 @@ void benchmark(int ins_del_ratio, int read_write_ratio, int element_size, int nu
     long long int operations = 0;
     time_t start = time(NULL);
 
-    int* array = (int*)malloc((num_elements + 1) * sizeof(int)); // allocate array dynamically
-
-    for (int i = 0; i < num_elements; i++) {
-        array[i] = i;
-    }
+    void* array = malloc((num_elements + 1) * element_size); // allocate array dynamically
 
     while (1) {
         for (int i = 0; i < num_elements; i++) {
@@ -47,12 +45,12 @@ void benchmark(int ins_del_ratio, int read_write_ratio, int element_size, int nu
                 return;
             }
             if (i % read_write_ratio == 0) {
-                read(i, array);
-                write(i, i, array);
+                read(i, array, element_size);
+                write(i, i, array, element_size);
             }
             if (ins_del_ratio != 0 && i % ins_del_ratio == 0) {
-                insertion(i, i, array, num_elements + 1);
-                deletion(i, array, num_elements + 1);
+                insertion(i, i, array, num_elements + 1, element_size);
+                deletion(i, array, num_elements + 1, element_size);
             }
             operations++;
         }
