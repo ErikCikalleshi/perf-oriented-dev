@@ -6,6 +6,27 @@
 
 volatile int read_value;
 
+/*void read(int index, int* array) {
+    read_value = array[index];
+}
+
+void write(int index, int value, int* array) {
+    array[index] = value + read_value;
+}
+
+void insertion(int index, int value, int* array, int size) {
+    for (int i = size - 1; i > index; i--) {
+        array[i] = array[i - 1];
+    }
+    array[index] = value;
+}
+
+void deletion(int index, int* array, int size) {
+    for (int i = index; i < size - 1; i++) {
+        array[i] = array[i + 1];
+    }
+}*/
+
 void read(int index, void* array, int element_size) {
     void* element = malloc(element_size);
     memcpy(element, (char*)array + index * element_size, element_size);
