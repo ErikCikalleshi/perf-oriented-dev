@@ -2,8 +2,6 @@ For benchmarking the timeout was set to 4 seconds for each iteration. The number
 
 2 * 4 * 4 * 3 * 4 = 384 Iterations * 4 seconds = 1536 seconds = 25.6 minutes
                   = 384 Iteartions * 5 seconds = 1920 seconds = 32 minutes >= 30 minutes
-# Array vs. Linked List
-![alt text](arraylist-vs-linkedlist-complexity.png)
 # Analysis
 In general we can say that more operations are performed with the datastructure "LinkedList" than with the datastructure "Array". 
 ## Locally

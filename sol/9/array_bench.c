@@ -45,12 +45,14 @@ void write(int index, int value, void* array, size_t element_size) {
 
 void insertion(int index, int value, void* array, size_t size, size_t element_size) {
     void* element = (char*)array + index * element_size;
+    //Shifts the elements starting from the index position to the end of the array by one position to the right, creating space for the new element.
     memmove((char*)element + element_size, element, (size - index - 1) * element_size);
     memcpy(element, &value, element_size);
 }
 
 void deletion(int index, void* array, size_t size, size_t element_size) {
     void* element = (char*)array + index * element_size;
+    // Shifts the elements starting from the index position to the end of the array by one position to the left, overwriting the element to be deleted.
     memmove(element, (char*)element + element_size, (size - index - 1) * element_size);
 }
 
@@ -72,13 +74,15 @@ void benchmark(int ins_del_ratio, int read_write_ratio, size_t element_size, siz
                 time_t end = time(NULL);
                 printf("%lld,", operations);
                 printf("%ld\n", end - start);
-                munmap(array, total_size);
+                free(array);
                 return;
             }
+            // if i is a multiple of read_write_ratio, perform a read and write operation
             if (i % read_write_ratio == 0) {
                 read(i, array, element_size);
                 write(i, i, array, element_size);
             }
+            // if i is a multiple of ins_del_ratio, perform an insertion and deletion operation
             if (ins_del_ratio != 0 && i % ins_del_ratio == 0) {
                 insertion(i, i, array, num_elements + 1, element_size);
                 deletion(i, array, num_elements + 1, element_size);
