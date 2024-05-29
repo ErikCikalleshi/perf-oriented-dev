@@ -1,4 +1,4 @@
-idx, data structure, Ins/Del Ratio,Read/Write Ratio,Element Size,Number of Elements,Operations Completed, Time[Seconds]
+idx,data structure,Ins/Del Ratio,Read/Write Ratio,Element Size,Number of Elements,Operations Completed, Time[Seconds]
 1,Array,0,100,8,10,342763171,4
 2,Array,0,100,8,1000,350437946,4
 3,Array,0,100,8,100000,346585470,4
@@ -10,7 +10,7 @@ idx, data structure, Ins/Del Ratio,Read/Write Ratio,Element Size,Number of Eleme
 9,Array,0,100,8192,10,111799421,4
 10,Array,0,100,8192,1000,253737801,4
 11,Array,0,100,8192,100000,57204729,4
-12,Array,0,100,8192,10000000,
+12,Array,0,100,8192,10000000,4
 13,Array,0,99,8,10,350446122,4
 14,Array,0,99,8,1000,356805849,4
 15,Array,0,99,8,100000,357274917,4
@@ -22,7 +22,7 @@ idx, data structure, Ins/Del Ratio,Read/Write Ratio,Element Size,Number of Eleme
 21,Array,0,99,8192,10,109772318,4
 22,Array,0,99,8192,1000,241930793,4
 23,Array,0,99,8192,100000,50742022,4
-24,Array,0,99,8192,10000000,
+24,Array,0,99,8192,10000000,4
 25,Array,0,90,8,10,346449064,4
 26,Array,0,90,8,1000,355989831,4
 27,Array,0,90,8,100000,354138128,4
@@ -34,7 +34,7 @@ idx, data structure, Ins/Del Ratio,Read/Write Ratio,Element Size,Number of Eleme
 33,Array,0,90,8192,10,110424051,4
 34,Array,0,90,8192,1000,244752323,4
 35,Array,0,90,8192,100000,48959190,4
-36,Array,0,90,8192,10000000,
+36,Array,0,90,8192,10000000,4
 37,Array,0,50,8,10,348442016,4
 38,Array,0,50,8,1000,358494175,4
 39,Array,0,50,8,100000,358797151,4
@@ -46,7 +46,7 @@ idx, data structure, Ins/Del Ratio,Read/Write Ratio,Element Size,Number of Eleme
 45,Array,0,50,8192,10,112648281,4
 46,Array,0,50,8192,1000,204499031,4
 47,Array,0,50,8192,100000,36325051,4
-48,Array,0,50,8192,10000000,
+48,Array,0,50,8192,10000000,4
 49,Array,1,100,8,10,118868982,4
 50,Array,1,100,8,1000,15023337,4
 51,Array,1,100,8,100000,22319,4
@@ -70,7 +70,7 @@ idx, data structure, Ins/Del Ratio,Read/Write Ratio,Element Size,Number of Eleme
 69,Array,1,99,8192,10,702884,4
 70,Array,1,99,8192,1000,622,4
 71,Array,1,99,8192,100000,3,4
-72,Array,1,99,8192,10000000,
+72,Array,1,99,8192,10000000,4
 73,Array,1,90,8,10,106932000,4
 74,Array,1,90,8,1000,14613635,4
 75,Array,1,90,8,100000,15572,4
@@ -82,7 +82,7 @@ idx, data structure, Ins/Del Ratio,Read/Write Ratio,Element Size,Number of Eleme
 81,Array,1,90,8192,10,835117,4
 82,Array,1,90,8192,1000,1064,4
 83,Array,1,90,8192,100000,4,4
-84,Array,1,90,8192,10000000,
+84,Array,1,90,8192,10000000,4
 85,Array,1,50,8,10,89897032,4
 86,Array,1,50,8,1000,14975348,4
 87,Array,1,50,8,100000,17979,4
@@ -94,7 +94,7 @@ idx, data structure, Ins/Del Ratio,Read/Write Ratio,Element Size,Number of Eleme
 93,Array,1,50,8192,10,840395,4
 94,Array,1,50,8192,1000,403,4
 95,Array,1,50,8192,100000,3,4
-96,Array,1,50,8192,10000000,
+96,Array,1,50,8192,10000000,4
 97,Array,10,100,8,10,193178252,4
 98,Array,10,100,8,1000,89434031,4
 99,Array,10,100,8,100000,327321,4
@@ -106,7 +106,7 @@ idx, data structure, Ins/Del Ratio,Read/Write Ratio,Element Size,Number of Eleme
 105,Array,10,100,8192,10,4224281,4
 106,Array,10,100,8192,1000,8241,4
 107,Array,10,100,8192,100000,21,4
-108,Array,10,100,8192,10000000,
+108,Array,10,100,8192,10000000,4
 109,Array,10,99,8,10,164191377,4
 110,Array,10,99,8,1000,88951671,4
 111,Array,10,99,8,100000,327241,4
@@ -118,7 +118,7 @@ idx, data structure, Ins/Del Ratio,Read/Write Ratio,Element Size,Number of Eleme
 117,Array,10,99,8192,10,4475281,4
 118,Array,10,99,8192,1000,7731,4
 119,Array,10,99,8192,100000,21,4
-120,Array,10,99,8192,10000000,
+120,Array,10,99,8192,10000000,4
 121,Array,10,90,8,10,197679541,4
 122,Array,10,90,8,1000,89652798,4
 123,Array,10,90,8,100000,339041,4
@@ -130,7 +130,7 @@ idx, data structure, Ins/Del Ratio,Read/Write Ratio,Element Size,Number of Eleme
 129,Array,10,90,8192,10,3677151,4
 130,Array,10,90,8192,1000,11511,4
 131,Array,10,90,8192,100000,31,4
-132,Array,10,90,8192,10000000,
+132,Array,10,90,8192,10000000,4
 133,Array,10,50,8,10,154209922,4
 134,Array,10,50,8,1000,89095670,4
 135,Array,10,50,8,100000,327971,4
@@ -142,7 +142,7 @@ idx, data structure, Ins/Del Ratio,Read/Write Ratio,Element Size,Number of Eleme
 141,Array,10,50,8192,10,4379531,4
 142,Array,10,50,8192,1000,11291,4
 143,Array,10,50,8192,100000,31,4
-144,Array,10,50,8192,10000000,
+144,Array,10,50,8192,10000000,4
 145,Array,50,100,8,10,191285371,4
 146,Array,50,100,8,1000,166900155,4
 147,Array,50,100,8,100000,2139901,4
@@ -154,7 +154,7 @@ idx, data structure, Ins/Del Ratio,Read/Write Ratio,Element Size,Number of Eleme
 153,Array,50,100,8192,10,4353711,4
 154,Array,50,100,8192,1000,52151,4
 155,Array,50,100,8192,100000,151,4
-156,Array,50,100,8192,10000000,
+156,Array,50,100,8192,10000000,4
 157,Array,50,99,8,10,193968292,4
 158,Array,50,99,8,1000,165826017,4
 159,Array,50,99,8,100000,1800801,4
@@ -166,7 +166,7 @@ idx, data structure, Ins/Del Ratio,Read/Write Ratio,Element Size,Number of Eleme
 165,Array,50,99,8192,10,3886341,4
 166,Array,50,99,8192,1000,39201,4
 167,Array,50,99,8192,100000,101,4
-168,Array,50,99,8192,10000000,
+168,Array,50,99,8192,10000000,4
 169,Array,50,90,8,10,179737750,4
 170,Array,50,90,8,1000,164475582,4
 171,Array,50,90,8,100000,1803501,4
@@ -178,7 +178,7 @@ idx, data structure, Ins/Del Ratio,Read/Write Ratio,Element Size,Number of Eleme
 177,Array,50,90,8192,10,3491731,4
 178,Array,50,90,8192,1000,42101,4
 179,Array,50,90,8192,100000,101,4
-180,Array,50,90,8192,10000000,
+180,Array,50,90,8192,10000000,4
 181,Array,50,50,8,10,179819193,4
 182,Array,50,50,8,1000,164451481,4
 183,Array,50,50,8,100000,1839651,4

@@ -5,15 +5,15 @@ For benchmarking the timeout was set to 4 seconds for each iteration. The number
 # Array vs. Linked List
 ![alt text](arraylist-vs-linkedlist-complexity.png)
 # Analysis
-In general we can say that locally more operations are performed with the datastructure "Array" than with the datastructure "List". 
+In general we can say that more operations are performed with the datastructure "LinkedList" than with the datastructure "Array". 
 ## Locally
-![Arrays vs. Linked Lists](local/total_operations_comparison_chart.png)
+![Arrays vs. Linked Lists](local/total_operations_by_data_structure.png)
 
 ## LCC3
-![Arrays vs. Linked Lists](lcc3/total_operations_comparison_chart.png)
+![Arrays vs. Linked Lists](lcc3/total_operations_by_data_structure.png)
 
 ## Elements size & Operations Completed
-Arrays outperform linked lists when it comes to the number of operations completed, especially for larger element sizes. This is because arrays store data contiguously in memory, which allows for faster access and modification of elements. Linked lists, on the other hand, store data in separate nodes that are scattered throughout memory, which can lead to slower access times.
+On lcc3 Linked Lists where with the element size 8 Bytes, 512 Bytes and 8192 Bytes always faster than Arrays. Accessing elements in arrays is O(1) time complexity, whereas in linked lists, it's O(n). For large element sizes the overhead of shifting elements in arrays can offset the benefits of its contiguous memory storage, since we have to shift large amounts of data. Meanwhile linked lists have O(1) time complexity for insertion and deletion since it just needs to change the pointers of the elements.
 ### Locally
 ![Arrays vs. Linked Lists](local/element_size_vs_operations_completed2.png)
 
@@ -21,17 +21,21 @@ Arrays outperform linked lists when it comes to the number of operations complet
 ![Arrays vs. Linked Lists](lcc3/element_size_vs_operations_completed2.png)
 
 ### Insertion / Delete Ratio & Operations Completed
-When the ratio of insertions and deletions is 0%, indicating only read and write operations are performed.
-Conversely, when the ratio is 50%, linked lists outperform arrays because linked lists have O(1) time complexity for insertion and deletion, while arrays have O(n) due to potential shifting of elements.
+0% Ins/Del (100% Read/Write):
+With no insertions or deletions, the operations are primarily reads. Arrays excel in read operations due to their O(1) access time, leading to high performance.
+LinkedList: While read operations are O(n) in LinkedLists, the difference is less pronounced when no insertions or deletions occur, but Arrays still have a slight edge.
+
+50% Ins/Del (50% Insert/Delete, 50% Read/Write):
+
+Array: The performance degradation becomes very pronounced as insertions and deletions are as frequent as read and write operations. The O(n) complexity for insertions and deletions leads to a significant reduction in the number of operations completed.
+LinkedList: LinkedLists excel in this scenario as they efficiently handle the frequent insertions and deletions with O(1) complexity. This results in a much higher number of operations completed compared to arrays, which struggle with the high overhead of shifting elements.
 ### Locally
 ![Arrays vs. Linked Lists](local/ins_del_ratio_vs_operations_completed2.png)
-
 
 ### LCC3
 ![Arrays vs. Linked Lists](lcc3/ins_del_ratio_vs_operations_completed2.png)
 ### Number of elements & Operations Completed
-For a small number of elements, arrays are slightly better than linked lists due to their contiguous memory storage. However, as the number of elements increases, arrays become much more efficient compared to linked lists, as accessing elements in arrays is O(1) time complexity, whereas in linked lists, it's O(n).
-When the number of elements is extremely large, the performance difference between arrays and linked lists narrows, as the overhead of traversing a large array can offset the benefits of its contiguous memory storage.
+For a small number of elements, linked list are slightly better than arrays. This goes on until 1000 Elements. After that linked lists are way better than arrays. We need also to consider the element size. Which in this case with 8 Bytes, 512 Bytes and 8192 Bytes. We saw that with greater element sizes linked lists are faster than arrays and element size correlates with the number of elements. 
 ### Locally
 ![Arrays vs. Linked Lists](local/number_of_elements_vs_operations_completed2.png)
 
@@ -39,7 +43,9 @@ When the number of elements is extremely large, the performance difference betwe
 ![Arrays vs. Linked Lists](lcc3/number_of_elements_vs_operations_completed2.png)
 
 ### Read / Write Ratio & Operations Completed
-Arrays significantly outperform linked lists in terms of read/write operations due to their O(1) time complexity for these operations. Linked lists, on the other hand, have O(n) time complexity for both read and write operations since they require traversing the list to access or modify elements.
+I was expecting that arrays and linkedlists would be more similar for read/write. Linked lists are for every read/write ratio faster than arrays. This is because linked lists have O(n) time complexity for read operations, but O(1) time complexity for write operations. Arrays have O(1) time complexity for read operations, but O(n) time complexity for write operations. 
+
+For 100% read/write operations and 0% ins/del operations,  arrays should be in theory faster than linked lists but probably the the big size of the elements and the number of elements are the reason why linked lists are faster than arrays.
 ### Locally
 ![Arrays vs. Linked Lists](local/read_write_ratio_vs_operations_completed2.png)
 
