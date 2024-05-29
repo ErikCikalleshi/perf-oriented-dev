@@ -1,7 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
 #include <string.h>
+#include <time.h>
+#include <sys/mman.h>
+#include <errno.h>
+
+
 #define TIME_LIMIT 4 // time limit for the benchmark in seconds
 
 volatile int read_value;
@@ -30,7 +34,8 @@ void deletion(int index, int* array, int size) {
 
 void read(int index, void* array, size_t element_size) {
     void* element = (char*)array + index * element_size;
-    // use element
+    // use element to prevent it from being optimized away
+    read_value = *(int*)element;
 }
 
 void write(int index, int value, void* array, size_t element_size) {
@@ -53,7 +58,13 @@ void benchmark(int ins_del_ratio, int read_write_ratio, size_t element_size, siz
     long long int operations = 0;
     time_t start = time(NULL);
 
-    void* array = malloc((num_elements + 1) * element_size); // allocate array dynamically
+    size_t total_size = (num_elements + 1) * element_size;
+    void* array = malloc(total_size);
+
+    if (array == NULL) {
+        fprintf(stderr, "Memory allocation failed: %s\n", strerror(errno));
+        return;
+    }
 
     while (1) {
         for (size_t i = 0; i < num_elements; i++) {
@@ -61,7 +72,7 @@ void benchmark(int ins_del_ratio, int read_write_ratio, size_t element_size, siz
                 time_t end = time(NULL);
                 printf("%lld,", operations);
                 printf("%ld\n", end - start);
-                free(array); // free the dynamically allocated memory
+                munmap(array, total_size);
                 return;
             }
             if (i % read_write_ratio == 0) {
@@ -75,28 +86,23 @@ void benchmark(int ins_del_ratio, int read_write_ratio, size_t element_size, siz
             operations++;
         }
     }
+
     time_t end = time(NULL);
     printf("%lld,", operations);
     printf("%ld\n", end - start);
-    free(array); // free the dynamically allocated memory
+    munmap(array, total_size);
 }
 
 int main(int argc, char *argv[]) {
-    // if (argc != 5) {
-    //     printf("Usage: %s ins_del_ratio read_write_ratio element_size num_elements\n", argv[0]);
-    //     return 1;
-    // }
- 
-    // int ins_del_ratio = atoi(argv[1]);
-    // int read_write_ratio = atoi(argv[2]);
-    // int element_size = atoi(argv[3]);
-    // int num_elements = atoi(argv[4]);
-    // 0 100 512 10000000
+    if (argc != 5) {
+        printf("Usage: %s ins_del_ratio read_write_ratio element_size num_elements\n", argv[0]);
+        return 1;
+    }
 
-    int ins_del_ratio = 0;
-    int read_write_ratio = 100;
-    size_t element_size = 512;
-    size_t num_elements = 10000000;
+    int ins_del_ratio = atoi(argv[1]);
+    int read_write_ratio = atoi(argv[2]);
+    size_t element_size = atoi(argv[3]);
+    size_t num_elements = atoi(argv[4]);
 
     benchmark(ins_del_ratio, read_write_ratio, element_size, num_elements);
     return 0;
