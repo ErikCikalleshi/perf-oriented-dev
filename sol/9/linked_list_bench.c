@@ -12,23 +12,23 @@ typedef struct Node {
 Node* head = NULL;
 volatile int read_value;
 
-void read(int index) {
+void read(size_t index) {
     Node* current = head;
-    for (int i = 0; i < index; i++) {
+    for (size_t i = 0; i < index; i++) {
         current = current->next;
     }
     read_value = current->value;
 }
 
-void write(int index, int value) {
+void write(size_t index, int value) {
     Node* current = head;
-    for (int i = 0; i < index; i++) {
+    for (size_t i = 0; i < index; i++) {
         current = current->next;
     }
     current->value = value + read_value;
 }
 
-void insertion(int index, int value) {
+void insertion(size_t index, int value) {
     Node* newNode = (Node*)malloc(sizeof(Node));
     newNode->value = value;
 
@@ -37,7 +37,7 @@ void insertion(int index, int value) {
         head = newNode;
     } else {
         Node* current = head;
-        for (int i = 0; i < index - 1; i++) {
+        for (size_t i = 0; i < index - 1; i++) {
             current = current->next;
         }
         newNode->next = current->next;
@@ -45,14 +45,14 @@ void insertion(int index, int value) {
     }
 }
 
-void deletion(int index) {
+void deletion(size_t index) {
     Node* toDelete;
     if (index == 0) {
         toDelete = head;
         head = head->next;
     } else {
         Node* current = head;
-        for (int i = 0; i < index - 1; i++) {
+        for (size_t i = 0; i < index - 1; i++) {
             current = current->next;
         }
         toDelete = current->next;
@@ -61,11 +61,11 @@ void deletion(int index) {
     free(toDelete);
 }
 
-void benchmark(int ins_del_ratio, int read_write_ratio, int element_size, int num_elements) {
+void benchmark(int ins_del_ratio, int read_write_ratio, size_t element_size, size_t num_elements) {
     long long int operations = 0;
     time_t start = time(NULL);
     while (1) {
-        for (int i = 0; i < num_elements; i++) {
+        for (size_t i = 0; i < num_elements; i++) {
             if (time(NULL) - start >= TIME_LIMIT) {
                 time_t end = time(NULL);
                 printf("%lld,", operations);
@@ -96,10 +96,11 @@ int main(int argc, char *argv[]) {
 
     int ins_del_ratio = atoi(argv[1]);
     int read_write_ratio = atoi(argv[2]);
-    int element_size = atoi(argv[3]);
-    int num_elements = atoi(argv[4]);
+    size_t element_size = atoi(argv[3]);
+    size_t num_elements = atoi(argv[4]);
 
-    for (int i = 0; i < element_size; i++) {
+  
+    for (size_t i = 0; i < element_size; i++) {
         insertion(0, i);
     }
 
