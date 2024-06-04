@@ -51,6 +51,7 @@
         "typeinfo": "cpp",
         "cstring": "cpp",
         "errno.h": "c",
-        "time.h": "c"
+        "time.h": "c",
+        "stdio.h": "c"
     }
 }

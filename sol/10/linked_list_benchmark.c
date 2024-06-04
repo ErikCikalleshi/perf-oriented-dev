@@ -3,11 +3,25 @@
 #include <string.h>
 #include <time.h>
 #include <assert.h>
-#define BENCHMARK_TIME_IN_SECONDS 5 
+
+#define BENCHMARK_TIME_IN_SECONDS 5
+#define ARRAY_SIZE 100
 
 int convert_to_int(const char* str, char* variable_name);
-void run_benchmark(int number_elements, int elem_size, int insertions_deletions, int reads_writes);
+void run_benchmark(int number_elements, int elem_size, const char *decision_array);
+void init_decision_array(char *array, size_t read_op);
+void shuffle(char *array);
+void init_linked_list(size_t number_elements, size_t elem_size);
+void* read(int index);
+void write(int index, void* value);
 
+typedef struct Node {
+    void* value;
+    struct Node* next;
+} Node;
+
+Node* head = NULL;
+int size = 0;
 /*
 INPUTS
 1. number of elements (n + 1 for arrays)
@@ -26,44 +40,81 @@ int main(int argc, char* argv[]) {
     int insertions_deletions = convert_to_int(argv[3], "insertions_deletions");
     int reads_writes = convert_to_int(argv[4], "reads_writes");
 
-    run_benchmark(number_elements, element_size, insertions_deletions, reads_writes);
+    if (insertions_deletions + reads_writes != 100) {
+        fprintf(stderr, "The ratios should have a total sum of 100.\nCurrent sum: %d\n", insertions_deletions + reads_writes);
+        exit(-1);
+    }
+
+    init_linked_list(number_elements, element_size);
+    int write_value = 5;
+    write(5, &write_value);
+    for (int i = 0; i < number_elements; i++) {
+        if (i + 1 != number_elements) {
+            fprintf(stdout, "%d -> ", *(int*)read(i));
+        } else {
+            fprintf(stdout, "%d\n", *(int*)read(i));
+        }
+    }
+
+//    srand(time(NULL));
+//    char shuffle_array[ARRAY_SIZE];
+//    size_t read_write_operations = ARRAY_SIZE * reads_writes / 100;
+
+//    init_decision_array(shuffle_array, read_write_operations);
+//    shuffle(shuffle_array);
+//    run_benchmark(number_elements, element_size, shuffle_array);
     return EXIT_SUCCESS;
 }
 
-typedef struct Node {
-    int value;
-    struct Node* next;
-} Node;
+void init_decision_array(char *array, size_t read_op) {
+    for (size_t i = 0; i < read_op; i++) {
+        array[i] = 'R';
+    }
+    for (size_t i = read_op; i < ARRAY_SIZE; i++) {
+        array[i] = 'I';
+    }
+}
 
-Node* head = NULL;
-int size = 0;
-// used to prevent optimizations;
-volatile int read_var;
-void read(int index) {
+void shuffle(char *array) {
+    for (size_t i = 0; i < ARRAY_SIZE; i++) {
+        size_t j = i + rand() / (RAND_MAX / (ARRAY_SIZE - i) + 1);
+        char t = array[j];
+        array[j] = array[i];
+        array[i] = t;
+    }
+}
+
+void* read(int index) {
     Node* current = head;
     for (int i = 0; i < index; i++) {
         current = current->next;
     }
+
+    // Prevent optimizations the compiler would've done
+    volatile void* read_var;
     read_var = current->value;
+    return current->value;
 }
 
-void write(int index, int value) {
+void write(int index, void* value) {
     Node* current = head;
     for (int i = 0; i < index; i++) {
         current = current->next;
     }
-
-    current->value = value + read_var;
+    current->value = value;
 }
 
-void insert(int index, int value) {
-    Node* new = malloc(sizeof(Node));
-    new->value = value;
+void insert(int index, void* value, size_t eleme_size) {
+    Node* new = (Node*)malloc(sizeof(Node));
+    new->value = malloc(eleme_size);
+    memcpy(new->value, value, eleme_size);
+    // Insert at the beginning
     if (index == 0) {
         new->next = head;
         head = new;
-    } 
-    else
+    }
+    // Insert in between
+    else if (index < size)
     {
         Node* position = head;
         for (int i = 0; i < index - 1; i++) {
@@ -72,61 +123,98 @@ void insert(int index, int value) {
         new->next = position->next;
         position->next = new;
     }
+    // Insert at the end of the list
+    else {
+        Node* pos = head;
+        for (int i = 0; i < size; i++) {
+            pos = pos->next;
+        }
+        pos->next = new;
+    }
     size++;
 }
 
 void delete(int index) {
-    Node* del;
+    Node* del = NULL;
+    // Delete at the beginning of the list
     if (index == 0) {
         del = head;
         head = head->next;
-        free(del);
+        del->next = NULL;
     }
-    else 
-    {
-        Node* pos = head;
+    // Delete in between
+    else if (index <= size - 1) {
+        Node* prev_node = head;
         for (int i = 0; i < index - 1; i++) {
-            pos = pos->next;
+            prev_node = prev_node->next;
         }
-        del = pos->next;
-        pos->next = del->next;
+        del = prev_node->next;
+        prev_node->next = del->next;
+        del->next = NULL;
     }
+    // Delete at the end of the list
+    else {
+        Node* prev_node = head;
+        del = head->next;
+        while (del->next != NULL) {
+            prev_node = prev_node->next;
+            del = del->next;
+        }
+        prev_node->next = NULL;
+    }
+    free(del->value);
     free(del);
     size--;
 }
 
-void run_benchmark(int number_elements, int elem_size, int insertions_deletions, int reads_writes) {
-
-    long long int operations = 0;
-    long long int operations_inside_ifs = 0;
-
+void run_benchmark(int number_elements, int elem_size, const char *decision_array) {
     for (int i = 0; i < number_elements; i++) {
-        insert(i, i);
+        insert(i, &i, elem_size);
     }
 
+    long long int operations = 0;
+    long double read_write_operations_done = 0;
+    long double insert_delete_operations_done = 0;
+
     time_t start = time(NULL);
-    int r_w_ratio = reads_writes != 0 ? 10 / (reads_writes / 10) : 0;
-    int i_d_ratio = insertions_deletions != 0 ? 10 / (insertions_deletions / 10) : 0;
 
     while(1) {
         for (int i = 0; i < number_elements; i++) {
             if (time(NULL) - start >= BENCHMARK_TIME_IN_SECONDS) {
                 fprintf(stdout, "Operations done: %lld\nTime passed: %ld\n", operations, (time(NULL) - start));
-                assert(operations == operations_inside_ifs);
+                assert((read_write_operations_done + insert_delete_operations_done) == operations);
+                fprintf(stdout, "Ratio computed for R/W: %Lf\nRatio computed for I/D: %Lf\n", read_write_operations_done / operations, insert_delete_operations_done / operations);
                 exit(0);
             }
 
-            if (i % r_w_ratio == 0) {
+            if (decision_array[i % ARRAY_SIZE] == 'R') {
                 read(i);
-                write(i, i);
-                operations_inside_ifs++;
-            } else if (i % i_d_ratio == 0) {
-                insert(i, i);
+                write(i, &i);
+                read_write_operations_done++;
+            } else {
+                insert(i, &i, elem_size);
                 delete(i);
-                operations_inside_ifs++;
+                insert_delete_operations_done++;
             }
             operations++;
-        } 
+        }
+    }
+}
+
+void init_linked_list(size_t number_elements, size_t elem_size) {
+    Node* start = (Node*)malloc(sizeof(Node));
+    start->value = malloc(elem_size);
+    head = start;
+    memset(start->value, 0, elem_size);
+    for (size_t i = 0; i < number_elements; i++) {
+        // Assign value to start_node; create new_node to point start_node->new_node; start_node becomes the new_node(last_node) at the end of the iteration
+        Node* new_node = (Node*)malloc(sizeof(Node));
+        new_node->value = malloc(elem_size);
+        memset(new_node->value, 0, elem_size);
+        new_node->next = NULL;
+
+        start->next = new_node;
+        start = new_node;
     }
 }
 
@@ -138,7 +226,7 @@ int convert_to_int(const char* str, char* variable_name) {
         fprintf(stderr, "%s is not a number.\n", variable_name);
         exit(-1);
     }
-    
+
     if (val < 0) {
         fprintf(stderr, "%s has to be positive.\n", variable_name);
         exit(-1);

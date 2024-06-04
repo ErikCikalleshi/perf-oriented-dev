@@ -7,8 +7,8 @@
 #define ARRAY_SIZE 100
 
 int convert_to_int(const char* str, char* variable_name);
-void run_benchmark(int number_elements, int elem_size, int insertions_deletions, int reads_writes, char *decision_array);
-void init_decision_array(char *array, int read_op, int ins_op);
+void run_benchmark(int number_elements, int elem_size, char *decision_array);
+void init_decision_array(char *array, size_t read_op);
 void shuffle(char *array);
 
 /*
@@ -27,20 +27,23 @@ int main(int argc, char* argv[]) {
     int number_elements = convert_to_int(argv[1], "number_elements");
     int element_size = convert_to_int(argv[2], "element_size");
     int insertions_deletions = convert_to_int(argv[3], "insertions_deletions");
+    // unused variable
+    insertions_deletions = insertions_deletions;
     int reads_writes = convert_to_int(argv[4], "reads_writes");
+  
+
 
     srand(time(NULL));
     char shuffle_array[ARRAY_SIZE];
-    int read_write_operations = ARRAY_SIZE * reads_writes / 100;
-    int insertion_delete_operations = ARRAY_SIZE * insertions_deletions / 100;
+    size_t read_write_operations = ARRAY_SIZE * reads_writes / 100;
 
-    init_decision_array(shuffle_array, read_write_operations, insertion_delete_operations);
+    init_decision_array(shuffle_array, read_write_operations);
     shuffle(shuffle_array);
-    run_benchmark(number_elements, element_size, insertions_deletions, reads_writes, shuffle_array);
+    run_benchmark(number_elements, element_size, shuffle_array);
     return EXIT_SUCCESS;
 }
 
-void init_decision_array(char *array, int read_op, int ins_op) {
+void init_decision_array(char *array, size_t read_op) {
     for (size_t i = 0; i < read_op; i++) {
         array[i] = 'R';
     }
@@ -73,6 +76,7 @@ void read(int index, char* array, int arr_len, int elem_size) {
     memcpy(element, array + index * elem_size, elem_size);
     // prevent optimizations
     volatile int elem = *((int*)element);
+    elem = elem;
     free(element);
 }
 
@@ -101,7 +105,7 @@ void delete(int index, char* array, int* arr_len, int elem_size) {
     (*arr_len)--;
 }
 
-void run_benchmark(int number_elements, int elem_size, int insertions_deletions, int reads_writes, char *decision_array) {
+void run_benchmark(int number_elements, int elem_size, char *decision_array) {
     char* arr = malloc((number_elements + 1) * elem_size);
     if (arr == NULL) {
         perror("array_init_malloc");
@@ -122,10 +126,11 @@ void run_benchmark(int number_elements, int elem_size, int insertions_deletions,
     while(1) {
         for (int i = 0; i < number_elements; i++) {
             if (time(NULL) - start >= BENCHMARK_TIME_IN_SECONDS) {
-                fprintf(stdout, "Operations done: %lld\nTime passed: %ld\n", operations, (time(NULL) - start));
+                //fprintf(stdout, "Operations done: %lld\nTime passed: %ld\n", operations, (time(NULL) - start));
                 free(arr);
-                assert((read_write_operations_done + insert_delete_operations_done) == operations);
-                fprintf(stdout, "Ratio computed for R/W: %Lf\nRatio computed for I/D: %Lf\n", read_write_operations_done / operations, insert_delete_operations_done / operations);
+                //assert((read_write_operations_done + insert_delete_operations_done) == operations);
+                //fprintf(stdout, "Ratio computed for R/W: %Lf\nRatio computed for I/D: %Lf\n", read_write_operations_done / operations, insert_delete_operations_done / operations);
+                fprintf(stdout, "%lld\n", operations);
                 exit(0);
             }
 
