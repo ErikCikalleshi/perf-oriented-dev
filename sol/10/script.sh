@@ -39,7 +39,7 @@ for ds in ${data_structures[@]}; do
                     for ne in ${num_elements[@]}; do
                         for nc in ${num_chunks[@]}; do
                             # Print the arguments
-                            echo "Arguments: $nc $ne $es $idr $rwr"
+                            echo "Arguments: $ds $nc $ne $es $idr $rwr"
                             
                             ./$ds $nc $ne $es $idr $rwr >> temp_output.txt 2>&1  # Redirect output to a temporary file
                             if [ $? -eq 0 ]; then  # Check if command execution was successful

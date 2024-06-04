@@ -87,12 +87,6 @@ int main(int argc, char *argv[])
     int ins_del_ratio = convert_to_int(argv[4], "ins_del_ratio");
     int read_write_ratio = convert_to_int(argv[5], "read_write_ratio");
 
-    int number_of_chunks = 1000;
-    int elems_per_chunk = 10000000;
-    size_t elem_size = 8;
-    int ins_del_ratio = 0;
-    int read_write_ratio = 100;
-
     if (ins_del_ratio + read_write_ratio != 100)
     {
         fprintf(stderr, "The sum of both ratios has to be equal to 100.\n");

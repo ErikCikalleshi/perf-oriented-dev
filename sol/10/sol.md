@@ -8,3 +8,7 @@ erikck@DESKTOP-PSB6OBO:~/perf-oriented-dev/sol/10$ valgrind --leak-check=full --
 ==32536== Warning: set address range perms: large range [0x18af58040, 0x2bc228040) (undefined)
 ==32536== Warning: set address range perms: large range [0x2bc229040, 0x3ed4f9040) (undefined)
 Killed
+
+Arguments: tiered_list 1 1000 8 1 99
+slurmstepd-n001: error: **_ JOB 115104 ON n001 CANCELLED AT 2024-06-04T20:55:20 DUE TO TIME LIMIT _**
+slurmstepd-n001: error: Detected 1 oom_kill event in StepId=115104.batch. Some of the step tasks have been OOM Killed.
