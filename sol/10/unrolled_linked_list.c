@@ -75,22 +75,21 @@ int main(int argc, char *argv[])
     run_example();
     return EXIT_SUCCESS;
 #else
-    // if (argc != 6)
-    // {
-    //     fprintf(stderr, "USAGE: %s <number_chunks> <elems_per_chunk> <elem_size> <ins_del_ratio> <r_w_ratio>\n", argv[0]);
-    //     exit(-1);
-    // }
+    if (argc != 6)
+    {
+        fprintf(stderr, "USAGE: %s <number_chunks> <elems_per_chunk> <elem_size> <ins_del_ratio> <r_w_ratio>\n", argv[0]);
+        exit(-1);
+    }
 
-    // int number_of_chunks = convert_to_int(argv[1], "number_of_chunks");
-    // int elems_per_chunk = convert_to_int(argv[2], "elems_per_chunk");
-    // size_t elem_size = (size_t)convert_to_int(argv[3], "elem_size");
-    // int ins_del_ratio = convert_to_int(argv[4], "ins_del_ratio");
-    // int read_write_ratio = convert_to_int(argv[5], "read_write_ratio");
+    int number_of_chunks = convert_to_int(argv[1], "number_of_chunks");
+    int elems_per_chunk = convert_to_int(argv[2], "elems_per_chunk");
+    size_t elem_size = (size_t)convert_to_int(argv[3], "elem_size");
+    int ins_del_ratio = convert_to_int(argv[4], "ins_del_ratio");
+    int read_write_ratio = convert_to_int(argv[5], "read_write_ratio");
 
-    // 10 10000000 512 0 100
-    int number_of_chunks = 10;
+    int number_of_chunks = 1000;
     int elems_per_chunk = 10000000;
-    size_t elem_size = 512;
+    size_t elem_size = 8;
     int ins_del_ratio = 0;
     int read_write_ratio = 100;
 
@@ -297,6 +296,11 @@ void init_block(LinkedBlock *block, size_t max_elem_per_chunk, size_t elem_size)
 {
     // create an array inside the Node value
     Node *new = (Node *)malloc(sizeof(Node));
+    if (new == NULL)
+    {
+        fprintf(stderr, "Error: Failed to allocate memory for Node\n");
+        exit(-1);
+    }
     new->value = malloc(elem_size * max_elem_per_chunk);
     if (new->value == NULL)
     {
