@@ -16,9 +16,9 @@ rm -f error_log.txt
 data_structures=("unrolled_linked_list" "tiered_list" )
 ins_del_ratios=(0 1 10 50)
 read_write_ratios=(100 99 90 50)
-element_sizes=(8 512 8192)
-num_elements=(10 1000 100000 10000000)
-num_chunks=(1 10 100 1000)
+element_sizes=(8 512) # Removed 8192 to reduce memory usage
+num_elements=(10 1000 10000) # Reduced maximum number of elements to 10,000
+num_chunks=(1 10 100) 
 
 gcc -O3 -o tiered_list tiered_array.c -Wall -Wextra -pedantic
 gcc -O3 -o unrolled_linked_list unrolled_linked_list.c -Wall -Wextra -pedantic
