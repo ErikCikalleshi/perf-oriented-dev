@@ -4,7 +4,7 @@
 #include <assert.h>
 #include <time.h>
 
-#define TESTING 0
+#define TESTING 1
 #define BENCHMARK_TIME_IN_SECONDS 5
 #define DECISION_ARRAY_SIZE 1000
 #if TESTING == 1
@@ -169,7 +169,9 @@ void insert(void **tier_zero_arr, int chunk, int index, void *value, int elem_si
     }
 
     void *old_arr = tier_zero_arr[chunk];
+    // get last value in array
     void *last_value_in_arr = read(tier_zero_arr, chunk, max_size, max_size[chunk] - 1, elem_size);
+    // if index is out of bounds and last value in array is 0 -> then insert at the end (since array is not full)
     if (index > max_size[chunk] - 1 && *(int *)last_value_in_arr == 0)
     {
         write(tier_zero_arr, chunk, max_size[chunk] - 1, value, elem_size, max_size);
@@ -177,6 +179,7 @@ void insert(void **tier_zero_arr, int chunk, int index, void *value, int elem_si
         free(last_value_in_arr);
         return;
     }
+    // if index is in bounds and last value in array is 0 -> then insert at index
     if (index <= max_size[chunk] - 1 && *(int *)last_value_in_arr == 0)
     {
         write(tier_zero_arr, chunk, index, value, elem_size, max_size);
@@ -186,6 +189,8 @@ void insert(void **tier_zero_arr, int chunk, int index, void *value, int elem_si
     }
 
     free(last_value_in_arr);
+    // if index is out of bounds and last value in array is not 0 -> (full chunk) then realloc and insert at the end
+    // realloc array with (size + 1) * elem_size
     tier_zero_arr[chunk] = realloc(old_arr, (max_size[chunk] + 1) * elem_size);
 
     void *arr_to_insert_to = tier_zero_arr[chunk];
@@ -207,13 +212,14 @@ void delete(void **tier_zero_arr, int chunk, int index, int *max_size, int *coun
     }
 
     void *elem_to_delete = read(tier_zero_arr, chunk, max_size, index, elem_size);
+    // if element is not 0, then decrease counter
     if (*(int *)elem_to_delete != 0)
     {
         count_arr[chunk]--;
     }
     free(elem_to_delete);
-
     void *arr_to_delete_from = tier_zero_arr[chunk];
+    // move all elements to the left
     memmove((char *)arr_to_delete_from + index * elem_size, (char *)arr_to_delete_from + (index + 1) * elem_size, (max_size[chunk] - index - 1) * elem_size);
 
     max_size[chunk]--;
