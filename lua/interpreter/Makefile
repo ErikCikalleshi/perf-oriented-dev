@@ -20,7 +20,7 @@ SYSLDFLAGS=
 SYSLIBS=
 
 MYCFLAGS=-DLUA_USE_JUMPTABLE -fno-plt -fno-stack-protector -flto -march=native -fno-strict-aliasing -funroll-loops -ffast-math
-MYLDFLAGS= -L/usr/local/lib -lgcov
+MYLDFLAGS= -L/home/cb76/cb761222/mimalloc/out/release/
 MYLIBS= -lmimalloc
 MYOBJS=
 

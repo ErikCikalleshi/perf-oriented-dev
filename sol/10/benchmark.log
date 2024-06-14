@@ -1,0 +1,94 @@
+In function 'write',
+    inlined from 'test_write' at tiered_array.c:375:13:
+tiered_array.c:230:5: warning: 'memcpy' forming offset [4, 7] is out of the bounds [0, 4] of object 'val' with type 'int' [-Warray-bounds]
+  230 |     memcpy((char *)arr + index * elem_size, value, elem_size);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tiered_array.c: In function 'test_write':
+tiered_array.c:374:17: note: 'val' declared here
+  374 |             int val = i + j;
+      |                 ^~~
+In function 'write',
+    inlined from 'test_insert_at_the_end_of_full_array' at tiered_array.c:529:13:
+tiered_array.c:230:5: warning: 'memcpy' forming offset [4, 7] is out of the bounds [0, 4] of object 'val' with type 'int' [-Warray-bounds]
+  230 |     memcpy((char *)arr + index * elem_size, value, elem_size);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tiered_array.c: In function 'test_insert_at_the_end_of_full_array':
+tiered_array.c:528:17: note: 'val' declared here
+  528 |             int val = i + j;
+      |                 ^~~
+In function 'write',
+    inlined from 'test_insert_at_the_beginning_of_full_array' at tiered_array.c:577:13:
+tiered_array.c:230:5: warning: 'memcpy' forming offset [4, 7] is out of the bounds [0, 4] of object 'val' with type 'int' [-Warray-bounds]
+  230 |     memcpy((char *)arr + index * elem_size, value, elem_size);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tiered_array.c: In function 'test_insert_at_the_beginning_of_full_array':
+tiered_array.c:576:17: note: 'val' declared here
+  576 |             int val = i + j;
+      |                 ^~~
+In function 'write',
+    inlined from 'test_insert_in_the_middle_of_full_array' at tiered_array.c:643:13:
+tiered_array.c:230:5: warning: 'memcpy' forming offset [4, 7] is out of the bounds [0, 4] of object 'val' with type 'int' [-Warray-bounds]
+  230 |     memcpy((char *)arr + index * elem_size, value, elem_size);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tiered_array.c: In function 'test_insert_in_the_middle_of_full_array':
+tiered_array.c:642:17: note: 'val' declared here
+  642 |             int val = i + j;
+      |                 ^~~
+In function 'write',
+    inlined from 'test_delete_at_the_beginning_of_full_array' at tiered_array.c:813:17:
+tiered_array.c:230:5: warning: 'memcpy' forming offset [4, 7] is out of the bounds [0, 4] of object 'first_value' with type 'int' [-Warray-bounds]
+  230 |     memcpy((char *)arr + index * elem_size, value, elem_size);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tiered_array.c: In function 'test_delete_at_the_beginning_of_full_array':
+tiered_array.c:806:9: note: 'first_value' declared here
+  806 |     int first_value = 92;
+      |         ^~~~~~~~~~~
+Arguments: tiered_list 1 10 8 0 100
+Arguments: tiered_list 10 10 8 0 100
+Arguments: tiered_list 100 10 8 0 100
+Arguments: tiered_list 1 1000 8 0 100
+Arguments: tiered_list 10 1000 8 0 100
+Arguments: tiered_list 100 1000 8 0 100
+Arguments: tiered_list 1 100000 8 0 100
+Arguments: tiered_list 10 100000 8 0 100
+Arguments: tiered_list 100 100000 8 0 100
+Arguments: tiered_list 1 10000000 8 0 100
+Arguments: tiered_list 10 10000000 8 0 100
+Arguments: tiered_list 100 10000000 8 0 100
+Arguments: tiered_list 1 10 512 0 100
+Arguments: tiered_list 10 10 512 0 100
+Arguments: tiered_list 100 10 512 0 100
+Arguments: tiered_list 1 1000 512 0 100
+Arguments: tiered_list 10 1000 512 0 100
+Arguments: tiered_list 100 1000 512 0 100
+Arguments: tiered_list 1 100000 512 0 100
+Arguments: tiered_list 10 100000 512 0 100
+Arguments: tiered_list 100 100000 512 0 100
+Arguments: tiered_list 1 10000000 512 0 100
+/var/spool/slurm/slurmd/job115104/slurm_script: line 40: 186429 Segmentation fault      (core dumped) ./$ds $nc $ne $es $idr $rwr >> temp_output.txt 2>&1
+Arguments: tiered_list 10 10000000 512 0 100
+/var/spool/slurm/slurmd/job115104/slurm_script: line 40: 186434 Segmentation fault      (core dumped) ./$ds $nc $ne $es $idr $rwr >> temp_output.txt 2>&1
+Arguments: tiered_list 100 10000000 512 0 100
+/var/spool/slurm/slurmd/job115104/slurm_script: line 40: 186442 Segmentation fault      (core dumped) ./$ds $nc $ne $es $idr $rwr >> temp_output.txt 2>&1
+Arguments: tiered_list 1 10 8192 0 100
+Arguments: tiered_list 10 10 8192 0 100
+Arguments: tiered_list 100 10 8192 0 100
+Arguments: tiered_list 1 1000 8192 0 100
+Arguments: tiered_list 10 1000 8192 0 100
+Arguments: tiered_list 100 1000 8192 0 100
+Arguments: tiered_list 1 100000 8192 0 100
+Arguments: tiered_list 10 100000 8192 0 100
+Arguments: tiered_list 100 100000 8192 0 100
+/var/spool/slurm/slurmd/job115104/slurm_script: line 40: 186493 Killed                  ./$ds $nc $ne $es $idr $rwr >> temp_output.txt 2>&1
+Arguments: tiered_list 1 10000000 8192 0 100
+/var/spool/slurm/slurmd/job115104/slurm_script: line 40: 198540 Segmentation fault      (core dumped) ./$ds $nc $ne $es $idr $rwr >> temp_output.txt 2>&1
+Arguments: tiered_list 10 10000000 8192 0 100
+/var/spool/slurm/slurmd/job115104/slurm_script: line 40: 198709 Segmentation fault      (core dumped) ./$ds $nc $ne $es $idr $rwr >> temp_output.txt 2>&1
+Arguments: tiered_list 100 10000000 8192 0 100
+/var/spool/slurm/slurmd/job115104/slurm_script: line 40: 198929 Segmentation fault      (core dumped) ./$ds $nc $ne $es $idr $rwr >> temp_output.txt 2>&1
+Arguments: tiered_list 1 10 8 1 99
+Arguments: tiered_list 10 10 8 1 99
+Arguments: tiered_list 100 10 8 1 99
+Arguments: tiered_list 1 1000 8 1 99
+slurmstepd-n001: error: *** JOB 115104 ON n001 CANCELLED AT 2024-06-04T20:55:20 DUE TO TIME LIMIT ***
+slurmstepd-n001: error: Detected 1 oom_kill event in StepId=115104.batch. Some of the step tasks have been OOM Killed.
