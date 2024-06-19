@@ -1,0 +1,50 @@
+100 x fibonacci_naive(30)     time:  13.4694 s  --  832040
+10000000 x fibonacci_tail(30) time:  11.4480 s  --  832040
+25000000 x fibonacci_iter(30) time:  10.9137 s  --  832040
+[ perf record: Woken up 22 times to write data ]
+[ perf record: Captured and wrote 5.489 MB perf.data (143826 samples) ]
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 143K of event 'cycles:u'
+# Event count (approx.): 107915660844
+#
+# Overhead  Command  Shared Object       Symbol                          
+# ........  .......  ..................  ................................
+#
+    94.08%  lua      lua                 [.] luaV_execute
+     4.06%  lua      lua                 [.] luaD_precall
+     0.28%  lua      libmimalloc.so.1.8  [.] mi_heap_realloc
+     0.20%  lua      lua                 [.] freeobj.lto_priv.0
+     0.19%  lua      libmimalloc.so.1.8  [.] operator delete[]
+     0.18%  lua      lua                 [.] luaC_newobjdt.constprop.0
+     0.17%  lua      lua                 [.] luaM_malloc_
+     0.16%  lua      lua                 [.] luaV_tointeger
+     0.13%  lua      lua                 [.] l_alloc
+     0.11%  lua      lua                 [.] sweepgen.isra.0
+     0.11%  lua      lua                 [.] luaF_closeupval
+     0.09%  lua      [unknown]           [k] 0xffffffffb8e00b87
+     0.05%  lua      lua                 [.] propagatemark
+     0.05%  lua      lua                 [.] atomic.lto_priv.0
+     0.05%  lua      libmimalloc.so.1.8  [.] mi_realloc
+     0.02%  lua      libc-2.28.so        [.] __memset_sse2_unaligned
+     0.02%  lua      libmimalloc.so.1.8  [.] mi_heap_realloc@plt
+     0.02%  lua      lua                 [.] luaC_step
+     0.02%  lua      libc-2.28.so        [.] __memset_sse2_unaligned_erms
+     0.01%  lua      lua                 [.] clearbyvalues
+     0.01%  lua      libmimalloc.so.1.8  [.] mi_find_page
+     0.00%  lua      lua                 [.] reallymarkobject.lto_priv.0
+     0.00%  lua      libmimalloc.so.1.8  [.] _mi_malloc_generic
+     0.00%  lua      [unknown]           [k] 0xffffffffb8e001a5
+     0.00%  lua      lua                 [.] correctgraylist
+     0.00%  lua      lua                 [.] finishgencycle.lto_priv.0
+     0.00%  lua      lua                 [.] clearbykeys
+     0.00%  lua      lua                 [.] llex.lto_priv.0
+     0.00%  lua      ld-2.28.so          [.] __GI___tunables_init
+
+
+#
+# (Tip: For tracepoint events, try: perf report -s trace_fields)
+#

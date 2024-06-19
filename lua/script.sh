@@ -8,7 +8,7 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --exclusive
 
-perf record /home/cb76/cb761222/perf-oriented-dev/lua/interpreter/lua ../fib.lua 
+perf record /home/cb76/cb761222/perf-oriented-dev/lua/interpreter/lua fib.lua 
 # perf annotate --stdio luaD_precall
 # perf annotate --stdio luaV_execute
 perf report
